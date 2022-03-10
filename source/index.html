@@ -365,7 +365,7 @@
             </ul>
           </div>
 
-          <div class="page-footer__socials social">
+          <div class="social">
             <ul class="social__list">
               <li class="social__item">
                 <a class="social__link" href="#">
@@ -396,6 +396,34 @@
         </div>
       </footer>
     </div>
+
+    <section class="modal">
+      <h2 class="visually-hidden">Модальное окно</h2>
+      <form class="application-form" action="https://echo.htmlacademy.ru" method="post">
+        <fieldset class="application-form__fieldset">
+          <legend class="application-form__legend">Оставьте заявку и мы свяжемся с вами в ближайшее время</legend>
+          <ul class="application-form__list">
+            <li class="application-form__item">
+              <label class="visually-hidden" for="modal-name-field">Имя</label>
+              <input class="application-form__input" type="text" placeholder="Имя" id="modal-name-field">
+            </li>
+            <li class="application-form__item">
+              <label class="visually-hidden" for="modal-phone-field">Телефон</label>
+              <input class="application-form__input" type="tel" placeholder="Телефон" id="modal-phone-field">
+            </li>
+            <li class="application-form__item">
+              <label class="visually-hidden" for="modal-email-field">Email</label>
+              <input class="application-form__input" type="email" placeholder="Email" id="modal-email-field">
+            </li>
+          </ul>
+          <p class="application-form__checkbox">
+            <input class="application-form__input-checkbox" type="checkbox" id="modal-checkbox-field" checked>
+            <label class="application-form__label-checkbox" for="modal-checkbox-field">Я согласен на обработку моих персональных данных</label>
+          </p>
+          <button class="btn application-form__button" type="button">Оставить заявку</button>
+        </fieldset>
+      </form>
+    </section>
 
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
