@@ -11,46 +11,40 @@
   <body>
     <div class="wrapper">
       <header class="page-header">
-        <div class="container">
-          <div class="page-header__logo-wrapper">
-            <a class="page-header__logo">
-              <picture>
-                <source media="(max-width: 319px)" srcset="img/svg/logo-mobile.svg">
-                <source media="(max-width: 767px)" srcset="img/svg/logo-tablet.svg">
-                <img class="page-header__image-logo" src="img/svg/logo-desktop.svg" width="70" height="38" alt="Логотип компании «Круизы в Антарктику»">
-              </picture>
+        <div class="container page-header__wrapper">
+          <nav class="navigation navigation--opened">
+            <a class="navigation__logo">
+              <svg class="navigation__icon-logo" width="70" height="38" viewBox="0 0 70 38">
+                <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
+              </svg>
             </a>
-          </div>
 
-          <nav class="navigation">
             <button class="navigation__toggle" type="button">
               <span class="visually-hidden">Открыть меню</span>
             </button>
 
-            <div class="navigation__wrapper">
-              <ul class="navigation__list">
-                <li class="navigation__item">
-                  <a class="navigation__link" href="#">Преимущества</a>
-                </li>
-                <li class="navigation__item">
-                  <a class="navigation__link" href="#">Направления</a>
-                </li>
-                <li class="navigation__item">
-                  <a class="navigation__link" href="#">Ближайшие круизы</a>
-                </li>
-                <li class="navigation__item">
-                  <a class="navigation__link" href="#">Контакты</a>
-                </li>
-              </ul>
-            </div>
+            <ul class="navigation__list reset-list">
+              <li class="navigation__item">
+                <a class="navigation__link" href="#">Преимущества</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#">Направления</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#">Ближайшие круизы</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#">Контакты</a>
+              </li>
+            </ul>
           </nav>
         </div>
       </header>
       <main>
         <section class="promo">
-          <div class="promo__wrapper">
-            <h1 class="promo__title">Круизы в Антарктику </h1>
-            <p class="promo__description">Волшебный мир айсбергов и пингвинов</p>
+          <div class="container promo__wrapper">
+            <h1 class="promo__title reset-text">Круизы в&nbsp;Антарктику </h1>
+            <p class="promo__description reset-text">Волшебный мир айсбергов и пингвинов</p>
           </div>
         </section>
         <section class="about">
@@ -322,7 +316,7 @@
             <h2 class="visually-hidden">Контакты</h2>
             <div class="contacts__map-wrapper">
               <picture>
-                <source type="image/webp" srcset="img/content/map/map-desktop.png 1x, img/content/map/map-desktop@2x.png 2x">
+                <source type="image/webp" srcset="img/content/map/map-desktop.webp 1x, img/content/map/map-desktop@2x.webp 2x">
                 <img class="contacts__map" src="img/content/map/map-desktop.png" srcset="img/content/map/map-desktop@2x.png 2x" width="560" height="306" alt="Офис по адресу: г. Санкт Петербург, ул. Большая Конюшенная, 19/8" loading="lazy">
               </picture>
             </div>
