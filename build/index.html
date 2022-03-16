@@ -12,12 +12,14 @@
     <div class="wrapper">
       <header class="page-header">
         <div class="container page-header__wrapper">
-          <nav class="navigation navigation--opened">
-            <a class="navigation__logo">
-              <svg class="navigation__icon-logo" width="70" height="38" viewBox="0 0 70 38">
-                <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
-              </svg>
-            </a>
+          <nav class="navigation navigation--is-closed">
+            <div class="navigation__logo-wrapper">
+              <a class="navigation__logo">
+                <svg class="navigation__icon-logo" width="70" height="38" viewBox="0 0 70 38">
+                  <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
+                </svg>
+              </a>
+            </div>
 
             <button class="navigation__toggle" type="button">
               <span class="visually-hidden">Открыть меню</span>
@@ -25,16 +27,16 @@
 
             <ul class="navigation__list reset-list">
               <li class="navigation__item">
-                <a class="navigation__link" href="#">Преимущества</a>
+                <a class="navigation__link" href="#advantages">Преимущества</a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link" href="#">Направления</a>
+                <a class="navigation__link" href="#catalog">Направления</a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link" href="#">Ближайшие круизы</a>
+                <a class="navigation__link" href="#booking">Ближайшие круизы</a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link" href="#">Контакты</a>
+                <a class="navigation__link" href="#contacts">Контакты</a>
               </li>
             </ul>
           </nav>
@@ -49,321 +51,431 @@
         </section>
         <section class="about">
           <div class="container about__wrapper">
-            <h2 class="about__title">Путешествие на край Земли</h2>
-            <p class="about__description">Это волшебное путешествие поможет вам познакомиться поближе с удивительным миром Антарктики. Наш круизный лайнер отвезет вас на край Земли, где вы сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и многое другое.</p>
+            <div class="about__title-wrapper">
+              <h2 class="about__title reset-text">Путешествие на край Земли</h2>
+              <p class="about__description reset-text">Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром Антарктики. Наш круизный лайнер отвезет вас на&nbsp;край Земли, где вы&nbsp;сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и&nbsp;многое другое.</p>
+            </div>
           </div>
         </section>
-        <section class="advantages">
-          <div class="container">
-            <h2 class="advantages__title">Преимущества</h2>
-            <ul class="advantages__list">
-              <li class="advantages__item">
-                <h3 class="advantages__name">Небольшой круизный лайнер</h3>
-                <p class="advantages__description">Круизный лайнер, рассчитанный всего лишь на 300 гостей, поможет избежать шума и очередей и даст возможность насладиться видами и природой.</p>
+        <section class="advantages" id="advantages">
+          <div class="container advantages__wrapper">
+            <h2 class="advantages__title reset-text">Преимущества</h2>
+            <ul class="advantages__list reset-list">
+              <li class="advantages__item advantages__item--cruise-liner">
+                <h3 class="advantages__name reset-text">Небольшой круизный лайнер</h3>
+                <p class="advantages__description reset-text">Круизный лайнер, рассчитанный всего лишь на&nbsp;300&nbsp;гостей, поможет избежать шума и&nbsp;очередей и&nbsp;даст возможность насладиться видами и&nbsp;природой.</p>
               </li>
-              <li class="advantages__item">
-                <h3 class="advantages__name">Система все включено</h3>
-                <p class="advantages__description">Все наши круизы работают по системе “Все Включено”. Великолепные блюда и безлимитный бар доступны для вас 24 часа.</p>
+              <li class="advantages__item advantages__item--all-inclusive">
+                <h3 class="advantages__name reset-text">Система все&nbsp;включено</h3>
+                <p class="advantages__description reset-text">Все наши круизы работают по&nbsp;системе "Все Включено". Великолепные блюда и&nbsp;безлимитный бар доступны для вас 24&nbsp;часа.</p>
               </li>
-              <li class="advantages__item">
-                <h3 class="advantages__name">Экскурсионные туры на Zodiac</h3>
-                <p class="advantages__description">Экскурсионные туры к берегам Антарктиды совершаются на оборудованных лодках типа Zodiac в сопровождении опытных экскурсоводов.</p>
+              <li class="advantages__item advantages__item--excursion-tours">
+                <h3 class="advantages__name reset-text">Экскурсионные туры на Zodiac</h3>
+                <p class="advantages__description reset-text">Экскурсионные туры к&nbsp;берегам Антарктиды совершаются <br>на оборудованных лодках типа Zodiac в&nbsp;сопровождении опытных экскурсоводов.</p>
               </li>
             </ul>
           </div>
         </section>
-        <section class="catalog">
+        <section class="catalog" id="catalog">
           <div class="container catalog__wrapper">
-            <h2 class="catalog__title">Ближайшие круизы</h2>
-            <ul class="catalog__list">
+            <h2 class="catalog__title reset-text">Ближайшие круизы</h2>
+            <ul class="catalog__list reset-list">
               <li class="catalog__item">
                 <article class="cruise">
-                  <h3 class="cruise__title">Круиз “Астория”</h3>
+                  <div class="cruise__title-wrapper">
+                    <h3 class="cruise__title reset-text">Круиз “Астория”</h3>
+                    <div class="cruise__description">
+                      <dl class="cruise__info reset-text">
+                        <dt class="cruise__term">Маршрут</dt>
+                        <dd class="cruise__definition">Аргентина - Фолклендские острова - Антарктида</dd>
+                        <dt class="cruise__term">Порт отправления</dt>
+                        <dd class="cruise__definition">Ушуайя</dd>
+                        <dt class="cruise__term">Продолжительность</dt>
+                        <dd class="cruise__definition">11 дней</dd>
+                        <dt class="cruise__term">Цена</dt>
+                        <dd class="cruise__definition">от 11500 $</dd>
+                      </dl>
+                      <a class="btn cruise__button" href="#" data-open-modal="booking">Забронировать</a>
+                    </div>
+                  </div>
                   <div class="cruise__image-wrapper">
                     <picture>
-                      <source type="image/webp" srcset="img/content/catalog/astoria-cruise.webp 1x, img/content/catalog/astoria-cruise@2x.webp 2x">
-                      <img class="cruise__image" src="img/content/catalog/astoria-cruise.jpg" srcset="img/content/catalog/astoria-cruise@2x.jpg" width="260" height="386" alt="Ледник антарктиды с горой на заднем плане.">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <source type="image/webp" media="(max-width: 319px)" srcset="img/content/catalog/astoria-cruise-mobile.webp 1x, img/content/catalog/astoria-cruise-mobile@2x.webp 2x">
+                      <!-- 1х: 309px; 2x: 618px -->
+                      <source type="image/webp" media="(max-width: 767px)" srcset="img/content/catalog/astoria-cruise-tablet.webp 1x, img/content/catalog/astoria-cruise-tablet@2x.webp 2x">
+                      <!-- 1х: 260px; 2x: 520px -->
+                      <source type="image/webp" srcset="img/content/catalog/astoria-cruise-desktop.webp 1x, img/content/catalog/astoria-cruise-desktop@2x.webp 2x">
+
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <source media="(max-width: 319px)" srcset="img/content/catalog/astoria-cruise-mobile.jpg 1x, img/content/catalog/astoria-cruise-mobile@2x.jpg 2x">
+                      <!-- 1х: 309px; 2x: 618px -->
+                      <source media="(max-width: 767px)" srcset="img/content/catalog/astoria-cruise-tablet.jpg 1x, img/content/catalog/astoria-cruise-tablet@2x.jpg 2x">
+                      <!-- 1х: 260px; 2x: 520px -->
+                      <img src="img/content/catalog/astoria-cruise-desktop.jpg" srcset="img/content/catalog/astoria-cruise-desktop@2x.jpg" width="260" height="386" alt="Ледник антарктиды с горой на заднем плане.">
                     </picture>
-                    <div class="cruise__description">
-                      <h4 class="cruise__name"></h4>
-                      <dl class="cruise__info">
-                        <dt>Маршрут</dt>
-                        <dd>Аргентина - Фолклендские острова - Антарктида</dd>
-                        <dt>Порт отправления</dt>
-                        <dd>Ушуайя</dd>
-                        <dt>Продолжительность</dt>
-                        <dd>11 дней</dd>
-                        <dt>Цена</dt>
-                        <dd>от 11500 $</dd>
-                      </dl>
-                      <button class="btn cruise__button" type="button">Забронировать</button>
-                    </div>
                   </div>
                 </article>
               </li>
               <li class="catalog__item">
                 <article class="cruise">
-                  <h3 class="cruise__title">Круиз “Элайн”</h3>
+                  <div class="cruise__title-wrapper">
+                    <h3 class="cruise__title reset-text">Круиз “Элайн”</h3>
+                    <div class="cruise__description">
+                      <dl class="cruise__info reset-text">
+                        <dt class="cruise__term">Маршрут</dt>
+                        <dd class="cruise__definition">Аргентина - Фолклендские острова - Антарктида - Чили</dd>
+                        <dt class="cruise__term">Порт отправления</dt>
+                        <dd class="cruise__definition">Буэнос-Айрес</dd>
+                        <dt class="cruise__term">Продолжительность</dt>
+                        <dd class="cruise__definition">20 дней</dd>
+                        <dt class="cruise__term">Цена</dt>
+                        <dd class="cruise__definition">от 14500 $</dd>
+                      </dl>
+                      <a class="btn cruise__button" href="#" data-open-modal="booking">Забронировать</a>
+                    </div>
+                  </div>
                   <div class="cruise__image-wrapper">
                     <picture>
-                      <source type="image/webp" srcset="img/content/catalog/astoria-cruise.webp 1x, img/content/catalog/astoria-cruise@2x.webp 2x">
-                      <img class="cruise__image" src="img/content/catalog/astoria-cruise.jpg" srcset="img/content/catalog/astoria-cruise@2x.jpg" width="260" height="386" alt="Ледник антарктиды с горой на заднем плане.">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <source type="image/webp" media="(max-width: 319px)" srcset="img/content/catalog/astoria-cruise-mobile.webp 1x, img/content/catalog/astoria-cruise-mobile@2x.webp 2x">
+                      <!-- 1х: 309px; 2x: 618px -->
+                      <source type="image/webp" media="(max-width: 767px)" srcset="img/content/catalog/astoria-cruise-tablet.webp 1x, img/content/catalog/astoria-cruise-tablet@2x.webp 2x">
+                      <!-- 1х: 260px; 2x: 520px -->
+                      <source type="image/webp" srcset="img/content/catalog/astoria-cruise-desktop.webp 1x, img/content/catalog/astoria-cruise-desktop@2x.webp 2x">
+
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <source media="(max-width: 319px)" srcset="img/content/catalog/astoria-cruise-mobile.jpg 1x, img/content/catalog/astoria-cruise-mobile@2x.jpg 2x">
+                      <!-- 1х: 309px; 2x: 618px -->
+                      <source media="(max-width: 767px)" srcset="img/content/catalog/astoria-cruise-tablet.jpg 1x, img/content/catalog/astoria-cruise-tablet@2x.jpg 2x">
+                      <!-- 1х: 260px; 2x: 520px -->
+                      <img src="img/content/catalog/astoria-cruise-desktop.jpg" srcset="img/content/catalog/astoria-cruise-desktop@2x.jpg" width="260" height="386" alt="Ледник антарктиды с горой на заднем плане.">
                     </picture>
-                    <div class="cruise__description">
-                      <h4 class="cruise__name"></h4>
-                      <dl class="cruise__info">
-                        <dt>Маршрут</dt>
-                        <dd>Аргентина - Фолклендские острова - Антарктида - Чили</dd>
-                        <dt>Порт отправления</dt>
-                        <dd>Буэнос-Айрес</dd>
-                        <dt>Продолжительность</dt>
-                        <dd>20 дней</dd>
-                        <dt>Цена</dt>
-                        <dd>от 14500 $</dd>
-                      </dl>
-                      <button class="btn cruise__button" type="button">Забронировать</button>
-                    </div>
                   </div>
                 </article>
               </li>
               <li class="catalog__item">
                 <article class="cruise">
-                  <h3 class="cruise__title">Круиз “Атлантис”</h3>
+                  <div class="cruise__title-wrapper">
+                    <h3 class="cruise__title reset-text">Круиз “Атлантис”</h3>
+                    <div class="cruise__description">
+                      <dl class="cruise__info reset-text">
+                        <dt class="cruise__term">Маршрут</dt>
+                        <dd class="cruise__definition">Чили - Антарктида</dd>
+                        <dt class="cruise__term">Порт отправления</dt>
+                        <dd class="cruise__definition">Пунта-Аренас</dd>
+                        <dt class="cruise__term">Продолжительность</dt>
+                        <dd class="cruise__definition">13 дней</dd>
+                        <dt class="cruise__term">Цена</dt>
+                        <dd class="cruise__definition">от 9700 $</dd>
+                      </dl>
+                      <a class="btn cruise__button" href="#" data-open-modal="booking">Забронировать</a>
+                    </div>
+                  </div>
                   <div class="cruise__image-wrapper">
                     <picture>
-                      <source type="image/webp" srcset="img/content/catalog/atlantis-cruise.webp 1x, img/content/catalog/atlantis-cruise@2x.webp 2x">
-                      <img class="cruise__image" src="img/content/catalog/atlantis-cruise.jpg" srcset="img/content/catalog/atlantis-cruise@2x.jpg" width="260" height="386" alt="Льдины антарктиды в океане.">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <source type="image/webp" media="(max-width: 319px)" srcset="img/content/catalog/atlantis-cruise-mobile.webp 1x, img/content/catalog/atlantis-cruise-mobile@2x.webp 2x">
+                      <!-- 1х: 309px; 2x: 618px -->
+                      <source type="image/webp" media="(max-width: 767px)" srcset="img/content/catalog/atlantis-cruise-tablet.webp 1x, img/content/catalog/atlantis-cruise-tablet@2x.webp 2x">
+                      <!-- 1х: 260px; 2x: 520px -->
+                      <source type="image/webp" srcset="img/content/catalog/atlantis-cruise-desktop.webp 1x, img/content/catalog/atlantis-cruise-desktop@2x.webp 2x">
+
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <source media="(max-width: 319px)" srcset="img/content/catalog/atlantis-cruise-mobile.jpg 1x, img/content/catalog/atlantis-cruise-mobile@2x.jpg 2x">
+                      <!-- 1х: 309px; 2x: 618px -->
+                      <source media="(max-width: 767px)" srcset="img/content/catalog/atlantis-cruise-tablet.jpg 1x, img/content/catalog/atlantis-cruise-tablet@2x.jpg 2x">
+                      <!-- 1х: 260px; 2x: 520px -->
+                      <img src="img/content/catalog/atlantis-cruise-desktop.jpg" srcset="img/content/catalog/atlantis-cruise-desktop@2x.jpg" width="260" height="386" alt="Льдины антарктиды в океане.">
                     </picture>
-                    <div class="cruise__description">
-                      <h4 class="cruise__name"></h4>
-                      <dl class="cruise__info">
-                        <dt>Маршрут</dt>
-                        <dd>Чили - Антарктида</dd>
-                        <dt>Порт отправления</dt>
-                        <dd>Пунта-Аренас</dd>
-                        <dt>Продолжительность</dt>
-                        <dd>13 дней</dd>
-                        <dt>Цена</dt>
-                        <dd>от 9700 $</dd>
-                      </dl>
-                      <button class="btn cruise__button" type="button">Забронировать</button>
-                    </div>
                   </div>
                 </article>
               </li>
               <li class="catalog__item">
                 <article class="cruise">
-                  <h3 class="cruise__title">Круиз “Одиссей”</h3>
+                  <div class="cruise__title-wrapper">
+                    <h3 class="cruise__title reset-text">Круиз “Одиссей”</h3>
+                    <div class="cruise__description">
+                      <dl class="cruise__info reset-text">
+                        <dt class="cruise__term">Маршрут</dt>
+                        <dd class="cruise__definition">Чили - Антарктида</dd>
+                        <dt class="cruise__term">Порт отправления</dt>
+                        <dd class="cruise__definition">Пунта-Аренас</dd>
+                        <dt class="cruise__term">Продолжительность</dt>
+                        <dd class="cruise__definition">13 дней</dd>
+                        <dt class="cruise__term">Цена</dt>
+                        <dd class="cruise__definition">от 9700 $</dd>
+                      </dl>
+                      <a class="btn cruise__button" href="#" data-open-modal="booking">Забронировать</a>
+                    </div>
+                  </div>
                   <div class="cruise__image-wrapper">
                     <picture>
-                      <source type="image/webp" srcset="img/content/catalog/odysseus-cruise.webp 1x, img/content/catalog/odysseus-cruise@2x.webp 2x">
-                      <img class="cruise__image" src="img/content/catalog/odysseus-cruise.jpg" srcset="img/content/catalog/odysseus-cruise@2x.jpg" width="260" height="386" alt="Океан на фоне гор Антарктиды.">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <source type="image/webp" media="(max-width: 319px)" srcset="img/content/catalog/odysseus-cruise-mobile.webp 1x, img/content/catalog/odysseus-cruise-mobile@2x.webp 2x">
+                      <!-- 1х: 309px; 2x: 618px -->
+                      <source type="image/webp" media="(max-width: 767px)" srcset="img/content/catalog/odysseus-cruise-tablet.webp 1x, img/content/catalog/odysseus-cruise-tablet@2x.webp 2x">
+                      <!-- 1х: 260px; 2x: 520px -->
+                      <source type="image/webp" srcset="img/content/catalog/odysseus-cruise-desktop.webp 1x, img/content/catalog/odysseus-cruise-desktop@2x.webp 2x">
+
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <source media="(max-width: 319px)" srcset="img/content/catalog/odysseus-cruise-mobile.jpg 1x, img/content/catalog/odysseus-cruise-mobile@2x.jpg 2x">
+                      <!-- 1х: 309px; 2x: 618px -->
+                      <source media="(max-width: 767px)" srcset="img/content/catalog/odysseus-cruise-tablet.jpg 1x, img/content/catalog/odysseus-cruise-tablet@2x.jpg 2x">
+                      <!-- 1х: 260px; 2x: 520px -->
+                      <img src="img/content/catalog/odysseus-cruise-desktop.jpg" srcset="img/content/catalog/odysseus-cruise-desktop@2x.jpg" width="260" height="386" alt="Океан на фоне гор Антарктиды.">
                     </picture>
-                    <div class="cruise__description">
-                      <h4 class="cruise__name"></h4>
-                      <dl class="cruise__info">
-                        <dt>Маршрут</dt>
-                        <dd></dd>
-                        <dt>Порт отправления</dt>
-                        <dd></dd>
-                        <dt>Продолжительность</dt>
-                        <dd></dd>
-                        <dt>Цена</dt>
-                        <dd></dd>
-                      </dl>
-                      <button class="btn cruise__button" type="button">Забронировать</button>
-                    </div>
                   </div>
                 </article>
               </li>
               <li class="catalog__item">
                 <article class="cruise">
-                  <h3 class="cruise__title">Круиз “Олимпия”</h3>
+                  <div class="cruise__title-wrapper">
+                    <h3 class="cruise__title reset-text">Круиз “Олимпия”</h3>
+                    <div class="cruise__description">
+                      <dl class="cruise__info reset-text">
+                        <dt class="cruise__term">Маршрут</dt>
+                        <dd class="cruise__definition">Аргентина - Фолклендские острова - Южная Георгия - Антарктида</dd>
+                        <dt class="cruise__term">Порт отправления</dt>
+                        <dd class="cruise__definition">Ушуайя</dd>
+                        <dt class="cruise__term">Продолжительность</dt>
+                        <dd class="cruise__definition">21 день</dd>
+                        <dt class="cruise__term">Цена</dt>
+                        <dd class="cruise__definition">от 18600 $</dd>
+                      </dl>
+                      <a class="btn cruise__button" href="#" data-open-modal="booking">Забронировать</a>
+                    </div>
+                  </div>
                   <div class="cruise__image-wrapper">
                     <picture>
-                      <source type="image/webp" srcset="img/content/catalog/olimpia-cruise.webp 1x, img/content/catalog/olimpia-cruise@2x.webp 2x">
-                      <img class="cruise__image" src="img/content/catalog/olimpia-cruise.jpg" srcset="img/content/catalog/olimpia-cruise@2x.jpg" width="260" height="386" alt="Пингвины на одном из ледников Антарктиды.">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <source type="image/webp" media="(max-width: 319px)" srcset="img/content/catalog/olimpia-cruise-mobile.webp 1x, img/content/catalog/olimpia-cruise-mobile@2x.webp 2x">
+                      <!-- 1х: 309px; 2x: 618px -->
+                      <source type="image/webp" media="(max-width: 767px)" srcset="img/content/catalog/olimpia-cruise-tablet.webp 1x, img/content/catalog/olimpia-cruise-tablet@2x.webp 2x">
+                      <!-- 1х: 260px; 2x: 520px -->
+                      <source type="image/webp" srcset="img/content/catalog/olimpia-cruise-desktop.webp 1x, img/content/catalog/olimpia-cruise-desktop@2x.webp 2x">
+
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <source media="(max-width: 319px)" srcset="img/content/catalog/olimpia-cruise-mobile.jpg 1x, img/content/catalog/olimpia-cruise-mobile@2x.jpg 2x">
+                      <!-- 1х: 309px; 2x: 618px -->
+                      <source media="(max-width: 767px)" srcset="img/content/catalog/olimpia-cruise-tablet.jpg 1x, img/content/catalog/olimpia-cruise-tablet@2x.jpg 2x">
+                      <!-- 1х: 260px; 2x: 520px -->
+                      <img src="img/content/catalog/olimpia-cruise-desktop.jpg" srcset="img/content/catalog/olimpia-cruise-desktop@2x.jpg" width="260" height="386" alt="Пингвины на одном из ледников Антарктиды.">
                     </picture>
-                    <div class="cruise__description">
-                      <h4 class="cruise__name"></h4>
-                      <dl class="cruise__info">
-                        <dt>Маршрут</dt>
-                        <dd>Аргентина - Фолклендские острова - Южная Георгия - Антарктида</dd>
-                        <dt>Порт отправления</dt>
-                        <dd>Ушуайя</dd>
-                        <dt>Продолжительность</dt>
-                        <dd>21 день</dd>
-                        <dt>Цена</dt>
-                        <dd>от 18600 $</dd>
-                      </dl>
-                      <button class="btn cruise__button" type="button">Забронировать</button>
-                    </div>
                   </div>
                 </article>
               </li>
               <li class="catalog__item">
                 <article class="cruise">
-                  <h3 class="cruise__title">Круиз “Аврора”</h3>
+                  <div class="cruise__title-wrapper">
+                    <h3 class="cruise__title reset-text">Круиз “Аврора”</h3>
+                    <div class="cruise__description">
+                      <dl class="cruise__info reset-text">
+                        <dt class="cruise__term">Маршрут</dt>
+                        <dd class="cruise__definition">Аргентина - Антарктида - Чили</dd>
+                        <dt class="cruise__term">Порт отправления</dt>
+                        <dd class="cruise__definition">Ушуайя</dd>
+                        <dt class="cruise__term">Продолжительность</dt>
+                        <dd class="cruise__definition">14 дней</dd>
+                        <dt class="cruise__term">Цена</dt>
+                        <dd class="cruise__definition">от 11700 $</dd>
+                      </dl>
+                      <a class="btn cruise__button" href="#" data-open-modal="booking">Забронировать</a>
+                    </div>
+                  </div>
                   <div class="cruise__image-wrapper">
                     <picture>
-                      <source type="image/webp" srcset="img/content/catalog/aurora-cruise.webp 1x, img/content/catalog/aurora-cruise@2x.webp 2x">
-                      <img class="cruise__image" src="img/content/catalog/aurora-cruise.jpg" srcset="img/content/catalog/aurora-cruise@2x.jpg" width="260" height="386" alt="Океан на фоне ледников Антарктиды.">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <source type="image/webp" media="(max-width: 319px)" srcset="img/content/catalog/aurora-cruise-mobile.webp 1x, img/content/catalog/aurora-cruise-mobile@2x.webp 2x">
+                      <!-- 1х: 309px; 2x: 618px -->
+                      <source type="image/webp" media="(max-width: 767px)" srcset="img/content/catalog/aurora-cruise-tablet.webp 1x, img/content/catalog/aurora-cruise-tablet@2x.webp 2x">
+                      <!-- 1х: 260px; 2x: 520px -->
+                      <source type="image/webp" srcset="img/content/catalog/aurora-cruise-desktop.webp 1x, img/content/catalog/aurora-cruise-desktop@2x.webp 2x">
+
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <source media="(max-width: 319px)" srcset="img/content/catalog/aurora-cruise-mobile.jpg 1x, img/content/catalog/aurora-cruise-mobile@2x.jpg 2x">
+                      <!-- 1х: 309px; 2x: 618px -->
+                      <source media="(max-width: 767px)" srcset="img/content/catalog/aurora-cruise-tablet.jpg 1x, img/content/catalog/aurora-cruise-tablet@2x.jpg 2x">
+                      <!-- 1х: 260px; 2x: 520px -->
+                      <img src="img/content/catalog/aurora-cruise-desktop.jpg" srcset="img/content/catalog/aurora-cruise-desktop@2x.jpg" width="260" height="386" alt="Океан на фоне ледников Антарктиды.">
                     </picture>
-                    <div class="cruise__description">
-                      <h4 class="cruise__name"></h4>
-                      <dl class="cruise__info">
-                        <dt>Маршрут</dt>
-                        <dd>Аргентина - Антарктида - Чили</dd>
-                        <dt>Порт отправления</dt>
-                        <dd>Ушуайя</dd>
-                        <dt>Продолжительность</dt>
-                        <dd>14 дней</dd>
-                        <dt>Цена</dt>
-                        <dd>от 11700 $</dd>
-                      </dl>
-                      <button class="btn cruise__button" type="button">Забронировать</button>
-                    </div>
                   </div>
                 </article>
               </li>
               <li class="catalog__item">
                 <article class="cruise">
-                  <h3 class="cruise__title">Круиз “Леонор”</h3>
+                  <div class="cruise__title-wrapper">
+                    <h3 class="cruise__title reset-text">Круиз “Леонор”</h3>
+                    <div class="cruise__description">
+                      <dl class="cruise__info reset-text">
+                        <dt class="cruise__term">Маршрут</dt>
+                        <dd class="cruise__definition">Чили - Южная Георгия - Антарктида - Аргентина</dd>
+                        <dt class="cruise__term">Порт отправления</dt>
+                        <dd class="cruise__definition">Пунта-Аренас</dd>
+                        <dt class="cruise__term">Продолжительность</dt>
+                        <dd class="cruise__definition">17 дней</dd>
+                        <dt class="cruise__term">Цена</dt>
+                        <dd class="cruise__definition">от 12500 $</dd>
+                      </dl>
+                      <a class="btn cruise__button" href="#" data-open-modal="booking">Забронировать</a>
+                    </div>
+                  </div>
                   <div class="cruise__image-wrapper">
                     <picture>
-                      <source type="image/webp" srcset="img/content/catalog/leonor-cruise.webp 1x, img/content/catalog/leonor-cruise@2x.webp 2x">
-                      <img class="cruise__image" src="img/content/catalog/leonor-cruise.jpg" srcset="img/content/catalog/leonor-cruise@2x.jpg" width="260" height="386" alt="Судно в океане на фоне ледников Антарктиды.">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <source type="image/webp" media="(max-width: 319px)" srcset="img/content/catalog/leonor-cruise-mobile.webp 1x, img/content/catalog/leonor-cruise-mobile@2x.webp 2x">
+                      <!-- 1х: 309px; 2x: 618px -->
+                      <source type="image/webp" media="(max-width: 767px)" srcset="img/content/catalog/leonor-cruise-tablet.webp 1x, img/content/catalog/leonor-cruise-tablet@2x.webp 2x">
+                      <!-- 1х: 260px; 2x: 520px -->
+                      <source type="image/webp" srcset="img/content/catalog/leonor-cruise-desktop.webp 1x, img/content/catalog/leonor-cruise-desktop@2x.webp 2x">
+
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <source media="(max-width: 319px)" srcset="img/content/catalog/leonor-cruise-mobile.jpg 1x, img/content/catalog/leonor-cruise-mobile@2x.jpg 2x">
+                      <!-- 1х: 309px; 2x: 618px -->
+                      <source media="(max-width: 767px)" srcset="img/content/catalog/leonor-cruise-tablet.jpg 1x, img/content/catalog/leonor-cruise-tablet@2x.jpg 2x">
+                      <!-- 1х: 260px; 2x: 520px -->
+                      <img src="img/content/catalog/leonor-cruise-desktop.jpg" srcset="img/content/catalog/leonor-cruise-desktop@2x.jpg" width="260" height="386" alt="Судно в океане на фоне ледников Антарктиды.">
                     </picture>
-                    <div class="cruise__description">
-                      <h4 class="cruise__name"></h4>
-                      <dl class="cruise__info">
-                        <dt>Маршрут</dt>
-                        <dd>Чили - Южная Георгия - Антарктида - Аргентина</dd>
-                        <dt>Порт отправления</dt>
-                        <dd>Пунта-Аренас</dd>
-                        <dt>Продолжительность</dt>
-                        <dd>17 дней</dd>
-                        <dt>Цена</dt>
-                        <dd>от 12500 $</dd>
-                      </dl>
-                      <button class="btn cruise__button" type="button">Забронировать</button>
-                    </div>
                   </div>
                 </article>
               </li>
               <li class="catalog__item">
                 <article class="cruise">
-                  <h3 class="cruise__title">Круиз “Минион - 1”</h3>
+                  <div class="cruise__title-wrapper">
+                    <h3 class="cruise__title reset-text">Круиз “Минион - 1”</h3>
+                    <div class="cruise__description">
+                      <dl class="cruise__info reset-text">
+                        <dt class="cruise__term">Маршрут</dt>
+                        <dd class="cruise__definition">Аргентина - Антарктида</dd>
+                        <dt class="cruise__term">Порт отправления</dt>
+                        <dd class="cruise__definition">Ушуайя</dd>
+                        <dt class="cruise__term">Продолжительность</dt>
+                        <dd class="cruise__definition">11 дней</dd>
+                        <dt class="cruise__term">Цена</dt>
+                        <dd class="cruise__definition">от 12300 $</dd>
+                      </dl>
+                      <a class="btn cruise__button" href="#" data-open-modal="booking">Забронировать</a>
+                    </div>
+                  </div>
                   <div class="cruise__image-wrapper">
                     <picture>
-                      <source type="image/webp" srcset="img/content/catalog/minion-1-cruise.webp 1x, img/content/catalog/minion-1-cruise@2x.webp 2x">
-                      <img class="cruise__image" src="img/content/catalog/minion-1-cruise.jpg" srcset="img/content/catalog/minion-1-cruise@2x.jpg" width="260" height="386" alt="Люди на фоне гор Антарктиды.">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <source type="image/webp" media="(max-width: 319px)" srcset="img/content/catalog/minion-1-cruise-mobile.webp 1x, img/content/catalog/minion-1-cruise-mobile@2x.webp 2x">
+                      <!-- 1х: 309px; 2x: 618px -->
+                      <source type="image/webp" media="(max-width: 767px)" srcset="img/content/catalog/minion-1-cruise-tablet.webp 1x, img/content/catalog/minion-1-cruise-tablet@2x.webp 2x">
+                      <!-- 1х: 260px; 2x: 520px -->
+                      <source type="image/webp" srcset="img/content/catalog/minion-1-cruise-desktop.webp 1x, img/content/catalog/minion-1-cruise-desktop@2x.webp 2x">
+
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <source media="(max-width: 319px)" srcset="img/content/catalog/minion-1-cruise-mobile.jpg 1x, img/content/catalog/minion-1-cruise-mobile@2x.jpg 2x">
+                      <!-- 1х: 309px; 2x: 618px -->
+                      <source media="(max-width: 767px)" srcset="img/content/catalog/minion-1-cruise-tablet.jpg 1x, img/content/catalog/minion-1-cruise-tablet@2x.jpg 2x">
+                      <!-- 1х: 260px; 2x: 520px -->
+                      <img src="img/content/catalog/minion-1-cruise-desktop.jpg" srcset="img/content/catalog/minion-1-cruise-desktop@2x.jpg" width="260" height="386" alt="Люди на фоне гор Антарктиды.">
                     </picture>
-                    <div class="cruise__description">
-                      <h4 class="cruise__name"></h4>
-                      <dl class="cruise__info">
-                        <dt>Маршрут</dt>
-                        <dd>Аргентина - Антарктида</dd>
-                        <dt>Порт отправления</dt>
-                        <dd>Ушуайя</dd>
-                        <dt>Продолжительность</dt>
-                        <dd>11 дней</dd>
-                        <dt>Цена</dt>
-                        <dd>от 12300 $</dd>
-                      </dl>
-                      <button class="btn cruise__button" type="button">Забронировать</button>
-                    </div>
                   </div>
                 </article>
               </li>
             </ul>
           </div>
         </section>
-        <section class="booking">
+        <section class="booking" id="booking">
           <div class="container booking__wrapper">
             <div class="booking__title-wrapper">
-              <h2 class="booking__title">Раннее бронирование</h2>
-              <p class="booking__description">Забронируйте тур за 3-6 месяцев до даты выезда и сэкономьте до 50%</p>
+              <h2 class="booking__title reset-text">Раннее бронирование</h2>
+              <p class="booking__description reset-text">Забронируйте тур<br> за&nbsp;3-6 месяцев до&nbsp;даты выезда и&nbsp;сэкономьте до&nbsp;50%</p>
             </div>
             <form class="application-form" action="https://echo.htmlacademy.ru" method="post">
-              <fieldset class="application-form__fieldset">
-                <legend class="application-form__legend">Оставьте заявку и мы свяжемся с вами в ближайшее время</legend>
-                <ul class="application-form__list">
-                  <li class="application-form__item">
-                    <label class="visually-hidden" for="name-field">Имя</label>
-                    <input class="application-form__input" type="text" placeholder="Имя" id="name-field">
-                  </li>
-                  <li class="application-form__item">
-                    <label class="visually-hidden" for="phone-field">Телефон</label>
-                    <input class="application-form__input" type="tel" placeholder="Телефон" id="phone-field">
-                  </li>
-                  <li class="application-form__item">
-                    <label class="visually-hidden" for="email-field">Email</label>
-                    <input class="application-form__input" type="email" placeholder="Email" id="email-field">
-                  </li>
-                </ul>
-                <p class="application-form__checkbox">
-                  <input class="application-form__input-checkbox" type="checkbox" id="checkbox-field" checked>
-                  <label class="application-form__label-checkbox" for="checkbox-field">Я согласен на обработку моих персональных данных</label>
-                </p>
-                <button class="btn application-form__button" type="button">Оставить заявку</button>
+              <fieldset class="application-form__fieldset reset-fieldset">
+                <div class="application-form__content-wrapper">
+                  <h3 class="application-form__legend reset-text">Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время</h3>
+                  <ul class="application-form__list reset-list">
+                    <li class="application-form__item">
+                      <label class="visually-hidden" for="name-field">Имя</label>
+                      <input class="application-form__input" type="text" placeholder="Имя" id="name-field">
+                    </li>
+                    <li class="application-form__item">
+                      <label class="visually-hidden" for="phone-field">Телефон</label>
+                      <input class="application-form__input" type="tel" placeholder="Телефон" id="phone-field">
+                    </li>
+                    <li class="application-form__item">
+                      <label class="visually-hidden" for="email-field">Email</label>
+                      <input class="application-form__input" type="email" placeholder="Email" id="email-field">
+                    </li>
+                  </ul>
+                  <p class="application-form__checkbox reset-text">
+                    <input class="application-form__input-checkbox visually-hidden" type="checkbox" id="checkbox-field" checked>
+                    <label class="application-form__label-checkbox" for="checkbox-field">Я согласен на обработку моих персональных данных</label>
+                  </p>
+                  <button class="btn application-form__button" type="submit">Оставить заявку</button>
+                </div>
               </fieldset>
             </form>
           </div>
         </section>
-        <section class="contacts">
+        <section class="contacts" id="contacts">
           <div class="container contacts__wrapper">
             <h2 class="visually-hidden">Контакты</h2>
             <div class="contacts__map-wrapper">
               <picture>
+                <!-- 1х: 290px; 2x: 580px -->
+                <source media="(max-width: 319px)" type="image/webp" srcset="img/content/map/map-mobile.webp 1x, img/content/map/map-mobile@2x.webp 2x">
+                <!-- 1х: 324px; 2x: 648px -->
+                <source media="(max-width: 767px)" type="image/webp" srcset="img/content/map/map-tablet.webp 1x, img/content/map/map-tablet@2x.webp 2x">
+                <!-- 1х: 560px; 2x: 1120px -->
                 <source type="image/webp" srcset="img/content/map/map-desktop.webp 1x, img/content/map/map-desktop@2x.webp 2x">
-                <img class="contacts__map" src="img/content/map/map-desktop.png" srcset="img/content/map/map-desktop@2x.png 2x" width="560" height="306" alt="Офис по адресу: г. Санкт Петербург, ул. Большая Конюшенная, 19/8" loading="lazy">
+                <!-- 1х: 290px; 2x: 580px -->
+                <source media="(max-width: 319px)" srcset="img/content/map/map-mobile.png 1x, img/content/map/map-mobile@2x.png 2x">
+                <!-- 1х: 324px; 2x: 648px -->
+                <source media="(max-width: 767px)" srcset="img/content/map/map-tablet.png 1x, img/content/map/map-tablet@2x.png 2x">
+                <!-- 1х: 560px; 2x: 1120px -->
+                <img src="img/content/map/map-desktop.png" srcset="img/content/map/map-desktop@2x.png 2x" width="560" height="306" alt="Офис по адресу: г. Санкт Петербург, ул. Большая Конюшенная, 19/8" loading="lazy">
               </picture>
             </div>
             <div class="contacts__info">
-              <h3 class="contacts__title">У вас ещё остались вопросы или сомнения? Приезжайте к нам в офис и мы вам все расскажем.</h3>
-              <ul class="contacts__list">
-                <li class="contacts__item contacts__item--address">г. Санкт Петербург, ул. Большая Конюшенная, 19/8</li>
-                <li class="contacts__item contacts__item--phone">8-800-200-00-00</li>
+              <h3 class="contacts__title reset-text">У&nbsp;вас ещё остались вопросы или сомнения? Приезжайте к&nbsp;нам в&nbsp;офис и&nbsp;мы&nbsp;вам все расскажем.</h3>
+              <ul class="contacts__list reset-list">
+                <li class="contacts__item contacts__item--address">г. Санкт Петербург,<br> ул. Большая Конюшенная, 19/8</li>
+                <li class="contacts__item contacts__item--phone">
+                  <a class="contacts__phone" href="tel:88002000000">8-800-200-00-00</a>
+                </li>
               </ul>
             </div>
           </div>
         </section>
       </main>
       <footer class="page-footer">
-        <div class="container">
+        <div class="container page-footer__wrapper">
           <div class="page-footer__logo-wrapper">
             <a class="page-footer__logo">
-              <picture>
-                <source media="(max-width: 319px)" srcset="img/svg/logo-mobile.svg">
-                <source media="(max-width: 767px)" srcset="img/svg/logo-tablet.svg">
-                <img class="page-header__image-logo" src="img/svg/logo-desktop.svg" width="70" height="38" alt="Логотип компании «Круизы в Антарктику»">
-              </picture>
+              <svg class="page-footer__icon-logo" width="70" height="38" viewBox="0 0 70 38">
+                <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
+              </svg>
             </a>
           </div>
 
           <div class="footer-navigation">
-            <ul class="footer-navigation__list">
+            <ul class="footer-navigation__list reset-list">
               <li class="footer-navigation__item">
-                <a class="footer-navigation__link" href="#">Преимущества</a>
+                <a class="footer-navigation__link" href="#advantages">Преимущества</a>
               </li>
               <li class="footer-navigation__item">
-                <a class="footer-navigation__link" href="#">Направления</a>
+                <a class="footer-navigation__link" href="#catalog">Направления</a>
               </li>
               <li class="footer-navigation__item">
-                <a class="footer-navigation__link" href="#">Ближайшие круизы</a>
+                <a class="footer-navigation__link" href="#booking">Ближайшие круизы</a>
               </li>
               <li class="footer-navigation__item">
-                <a class="footer-navigation__link" href="#">Контакты</a>
+                <a class="footer-navigation__link" href="#contacts">Контакты</a>
               </li>
             </ul>
           </div>
 
           <div class="social">
-            <ul class="social__list">
+            <ul class="social__list reset-list">
               <li class="social__item">
                 <a class="social__link" href="#">
-                  <svg class="social__icon" width="11" height="20">
+                  <svg class="social__icon social__icon--facebook" width="11" height="20" viewBox="0 0 11 20">
                     <use xlink:href="img/sprite_auto.svg#icon-facebook"></use>
                   </svg>
                   <span class="visually-hidden">Фейсбук</span>
@@ -371,7 +483,7 @@
               </li>
               <li class="social__item">
                 <a class="social__link" href="#">
-                  <svg class="social__icon" width="20" height="20">
+                  <svg class="social__icon social__icon--instagram" width="20" height="20" viewBox="0 0 20 20">
                     <use xlink:href="img/sprite_auto.svg#icon-instagram"></use>
                   </svg>
                   <span class="visually-hidden">Инстаграм</span>
@@ -379,7 +491,7 @@
               </li>
               <li class="social__item">
                 <a class="social__link" href="#">
-                  <svg class="social__icon" width="20" height="16">
+                  <svg class="social__icon social__icon--twitter" width="20" height="16" viewBox="0 0 20 16">
                     <use xlink:href="img/sprite_auto.svg#icon-twitter"></use>
                   </svg>
                   <span class="visually-hidden">Твиттер</span>
@@ -391,34 +503,41 @@
       </footer>
     </div>
 
-    <section class="modal">
-      <h2 class="visually-hidden">Модальное окно</h2>
-      <form class="application-form" action="https://echo.htmlacademy.ru" method="post">
-        <fieldset class="application-form__fieldset">
-          <legend class="application-form__legend">Оставьте заявку и мы свяжемся с вами в ближайшее время</legend>
-          <ul class="application-form__list">
-            <li class="application-form__item">
-              <label class="visually-hidden" for="modal-name-field">Имя</label>
-              <input class="application-form__input" type="text" placeholder="Имя" id="modal-name-field">
-            </li>
-            <li class="application-form__item">
-              <label class="visually-hidden" for="modal-phone-field">Телефон</label>
-              <input class="application-form__input" type="tel" placeholder="Телефон" id="modal-phone-field">
-            </li>
-            <li class="application-form__item">
-              <label class="visually-hidden" for="modal-email-field">Email</label>
-              <input class="application-form__input" type="email" placeholder="Email" id="modal-email-field">
-            </li>
-          </ul>
-          <p class="application-form__checkbox">
-            <input class="application-form__input-checkbox" type="checkbox" id="modal-checkbox-field" checked>
-            <label class="application-form__label-checkbox" for="modal-checkbox-field">Я согласен на обработку моих персональных данных</label>
-          </p>
-          <button class="btn application-form__button" type="button">Оставить заявку</button>
-        </fieldset>
-      </form>
+    <section class="modal modal--preload" data-modal="booking">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <h2 class="visually-hidden">Модальное окно</h2>
+          <form class="application-form" action="https://echo.htmlacademy.ru" method="post">
+            <fieldset class="application-form__fieldset reset-fieldset">
+              <div class="application-form__content-wrapper">
+                <h3 class="application-form__legend reset-text">Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время</h3>
+                <ul class="application-form__list reset-list">
+                  <li class="application-form__item">
+                    <label class="visually-hidden" for="modal-name-field">Имя</label>
+                    <input class="application-form__input" type="text" placeholder="Имя" id="modal-name-field">
+                  </li>
+                  <li class="application-form__item">
+                    <label class="visually-hidden" for="modal-phone-field">Телефон</label>
+                    <input class="application-form__input" type="tel" placeholder="Телефон" id="modal-phone-field">
+                  </li>
+                  <li class="application-form__item">
+                    <label class="visually-hidden" for="modal-email-field">Email</label>
+                    <input class="application-form__input" type="email" placeholder="Email" id="modal-email-field">
+                  </li>
+                </ul>
+                <p class="application-form__checkbox reset-text">
+                  <input class="application-form__input-checkbox visually-hidden" type="checkbox" id="modal-checkbox-field" checked>
+                  <label class="application-form__label-checkbox" for="modal-checkbox-field">Я согласен на обработку моих персональных данных</label>
+                </p>
+                <button class="btn application-form__button" type="submit">Оставить заявку</button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
     </section>
-
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNDrSx-tXwouhgMarRJCfmSlodzCAIrXs"></script>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>
