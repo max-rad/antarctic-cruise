@@ -1,5 +1,5 @@
 .contacts {
-
+  background-color: $color-alice-blue;
 }
 
 .contacts__wrapper {
@@ -70,20 +70,20 @@
   @include vp-319 {
     order: 0;
   }
-}
 
-.contacts__title {
-  margin-bottom: 32px;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 27px;
+  h3 {
+    margin-bottom: 32px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
 
-  @include vp-767 {
-    margin-bottom: 26px;
-  }
+    @include vp-767 {
+      margin-bottom: 26px;
+    }
 
-  @include vp-319 {
-    margin-bottom: 27px;
+    @include vp-319 {
+      margin-bottom: 27px;
+    }
   }
 }
 

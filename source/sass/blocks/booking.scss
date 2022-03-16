@@ -61,53 +61,52 @@
   @include vp-319 {
     margin-bottom: 34px;
   }
-}
 
-.booking__title {
-  margin-bottom: 9px;
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 60px;
-  color: $color-tangaroa;
+  h2 {
+    margin-bottom: 9px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 60px;
+    color: $color-tangaroa;
 
-  @include vp-767 {
-    margin-bottom: 5px;
-    font-size: 34px;
-    line-height: 51px;
-    text-align: center;
+    @include vp-767 {
+      margin-bottom: 5px;
+      font-size: 34px;
+      line-height: 51px;
+      text-align: center;
+    }
+
+    @include vp-319 {
+      margin-bottom: 14px;
+      font-size: 24px;
+      line-height: 31px;
+    }
   }
 
-  @include vp-319 {
-    margin-bottom: 14px;
-    font-size: 24px;
-    line-height: 31px;
-  }
-}
-
-.booking__description {
-  padding-right: 105px;
-  font-size: 18px;
-  line-height: 27px;
-  color: $color-tangaroa;
-
-  br {
-    display: none;
-  }
-
-  @include vp-767 {
-    padding-right: 20px;
-    padding-left: 20px;
-    text-align: center;
-  }
-
-  @include vp-319 {
-    padding: 0;
-    font-size: 16px;
-    line-height: 22px;
+  p {
+    padding-right: 105px;
+    font-size: 18px;
+    line-height: 27px;
+    color: $color-tangaroa;
 
     br {
-      display: block;
+      display: none;
+    }
+
+    @include vp-767 {
+      padding-right: 20px;
+      padding-left: 20px;
+      text-align: center;
+    }
+
+    @include vp-319 {
+      padding: 0;
+      font-size: 16px;
+      line-height: 22px;
+
+      br {
+        display: block;
+      }
     }
   }
 }
-

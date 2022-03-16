@@ -1,22 +1,7 @@
 const smoothScroll = () => {
-  const anchorHeaderLinks = document.querySelectorAll('.navigation__link');
-  const anchorFooterLinks = document.querySelectorAll('.footer-navigation__link');
+  const anchorLinks = document.querySelectorAll('[data-link]');
 
-  for (let anchor of anchorHeaderLinks) {
-    anchor.addEventListener('click', function (evt) {
-      evt.preventDefault();
-
-      const anchorHref = anchor.getAttribute('href').substring(1);
-
-      document.getElementById(anchorHref).scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-      });
-
-    });
-  }
-
-  for (let anchor of anchorFooterLinks) {
+  for (let anchor of anchorLinks) {
     anchor.addEventListener('click', function (evt) {
       evt.preventDefault();
 

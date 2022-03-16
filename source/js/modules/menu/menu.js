@@ -1,6 +1,7 @@
 const showMenu = () => {
-  const navMain = document.querySelector('.navigation');
-  const navToggle = navMain.querySelector('.navigation__toggle');
+  const navMain = document.querySelector('[data-menu="menu"]');
+  const navToggle = navMain.querySelector('[data-menu="toggle"]');
+
   navMain.classList.remove('navigation--no-js');
   navToggle.addEventListener('click', function (evt) {
     evt.preventDefault();

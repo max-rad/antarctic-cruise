@@ -1,12 +1,4 @@
 .application-form {
-
-}
-
-.application-form__fieldset {
-
-}
-
-.application-form__content-wrapper {
   width: 403px;
   padding: 44px 50px 50px;
   background-color: $color-tangaroa;
@@ -16,18 +8,18 @@
     width: 290px;
     padding: 35px 30px 41px;
   }
-}
 
-.application-form__legend {
-  margin-bottom: 27px;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 27px;
-  color: $color-alice-blue;
+  h3 {
+    margin-bottom: 27px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: $color-alice-blue;
 
-  @include vp-319 {
-    line-height: 25px;
-    text-align: center;
+    @include vp-319 {
+      line-height: 25px;
+      text-align: center;
+    }
   }
 }
 
@@ -43,19 +35,19 @@
   &:last-child {
     margin-bottom: 0;
   }
-}
 
-.application-form__input {
-  width: 100%;
-  height: 43px;
-  padding: 11px 16px;
-  border: none;
-  background-color: $color-alice-blue;
+  input {
+    width: 100%;
+    height: 43px;
+    padding: 11px 16px;
+    border: none;
+    background-color: $color-alice-blue;
 
-  &::placeholder {
-    font-size: 14px;
-    line-height: 21px;
-    color: $color-tangaroa-zero-point-seven;
+    &::placeholder {
+      font-size: 14px;
+      line-height: 21px;
+      color: $color-tangaroa-zero-point-seven;
+    }
   }
 }
 
@@ -65,64 +57,64 @@
   @include vp-319 {
     margin-bottom: 24px;
   }
-}
 
-.application-form__input-checkbox {
-  + .application-form__label-checkbox::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 18px;
-    height: 18px;
-    background-color: $color-alice-blue;
+  input {
+    + .application-form__label-checkbox::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 18px;
+      height: 18px;
+      background-color: $color-alice-blue;
+
+      @include vp-319 {
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+      }
+    }
+
+    &:checked {
+      + .application-form__label-checkbox::before {
+        background-image: url("../img/svg/icon-check.svg");
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+      }
+    }
+
+    &:not(:disabled):hover,
+    &:not(:disabled):focus {
+      + .application-form__label-checkbox::before {
+        opacity: 0.8;
+      }
+    }
+
+    &:disabled {
+      + .application-form__label-checkbox::before {
+        opacity: 0.5;
+        pointer-events: none;
+      }
+    }
+  }
+
+  label {
+    position: relative;
+    display: flex;
+    min-height: 18px;
+    padding-top: 3px;
+    padding-left: 23px;
+    font-size: 10px;
+    line-height: 13px;
+    color: $color-alice-blue;
+    cursor: pointer;
 
     @include vp-319 {
-      width: 20px;
-      height: 20px;
-      margin-right: 8px;
+      min-height: 20px;
+      padding-top: 0;
+      padding-right: 50px;
+      padding-left: 28px;
     }
-  }
-
-  &:checked {
-    + .application-form__label-checkbox::before {
-      background-image: url("../img/svg/icon-check.svg");
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
-    }
-  }
-
-  &:not(:disabled):hover,
-  &:not(:disabled):focus {
-    + .application-form__label-checkbox::before {
-      opacity: 0.8;
-    }
-  }
-
-  &:disabled {
-    + .application-form__label-checkbox::before {
-      opacity: 0.5;
-      pointer-events: none;
-    }
-  }
-}
-
-.application-form__label-checkbox {
-  position: relative;
-  display: flex;
-  min-height: 18px;
-  padding-top: 3px;
-  padding-left: 23px;
-  font-size: 10px;
-  line-height: 13px;
-  color: $color-alice-blue;
-  cursor: pointer;
-
-  @include vp-319 {
-    min-height: 20px;
-    padding-top: 0;
-    padding-right: 50px;
-    padding-left: 28px;
   }
 }
 

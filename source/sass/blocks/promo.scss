@@ -36,40 +36,40 @@
   @include vp-319 {
     padding: 176px 0 179px 15px;
   }
-}
 
-.promo__title {
-  margin-bottom: 12px;
-  font-size: 54px;
-  line-height: 66px;
-  color: $color-alice-blue;
+  h1 {
+    margin-bottom: 12px;
+    font-size: 54px;
+    line-height: 66px;
+    color: $color-alice-blue;
 
-  @include vp-767 {
-    font-size: 50px;
-    line-height: 61px;
+    @include vp-767 {
+      font-size: 50px;
+      line-height: 61px;
+    }
+
+    @include vp-319 {
+      margin-bottom: 11px;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 45px;
+    }
   }
 
-  @include vp-319 {
-    margin-bottom: 11px;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 45px;
-  }
-}
+  p {
+    font-size: 20px;
+    line-height: 24px;
+    color: $color-alice-blue;
 
-.promo__description {
-  font-size: 20px;
-  line-height: 24px;
-  color: $color-alice-blue;
+    @include vp-767 {
+      font-size: 18px;
+      line-height: 22px;
+    }
 
-  @include vp-767 {
-    font-size: 18px;
-    line-height: 22px;
-  }
-
-  @include vp-319 {
-    padding-right: 75px;
-    font-size: 16px;
-    line-height: 22px;
+    @include vp-319 {
+      padding-right: 75px;
+      font-size: 16px;
+      line-height: 22px;
+    }
   }
 }

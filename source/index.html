@@ -12,7 +12,7 @@
     <div class="wrapper">
       <header class="page-header">
         <div class="container page-header__wrapper">
-          <nav class="navigation navigation--is-closed">
+          <nav class="navigation navigation--is-closed" data-menu="menu">
             <div class="navigation__logo-wrapper">
               <a class="navigation__logo">
                 <svg class="navigation__icon-logo" width="70" height="38" viewBox="0 0 70 38">
@@ -21,22 +21,22 @@
               </a>
             </div>
 
-            <button class="navigation__toggle" type="button">
+            <button class="navigation__toggle" type="button" data-menu="toggle">
               <span class="visually-hidden">Открыть меню</span>
             </button>
 
             <ul class="navigation__list reset-list">
               <li class="navigation__item">
-                <a class="navigation__link" href="#advantages">Преимущества</a>
+                <a class="navigation__link" href="#advantages" data-link="anchor-link">Преимущества</a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link" href="#catalog">Направления</a>
+                <a class="navigation__link" href="#catalog" data-link="anchor-link">Направления</a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link" href="#booking">Ближайшие круизы</a>
+                <a class="navigation__link" href="#booking" data-link="anchor-link">Ближайшие круизы</a>
               </li>
               <li class="navigation__item">
-                <a class="navigation__link" href="#contacts">Контакты</a>
+                <a class="navigation__link" href="#contacts" data-link="anchor-link">Контакты</a>
               </li>
             </ul>
           </nav>
@@ -385,38 +385,36 @@
               <h2 class="booking__title reset-text">Раннее бронирование</h2>
               <p class="booking__description reset-text">Забронируйте тур<br> за&nbsp;3-6 месяцев до&nbsp;даты выезда и&nbsp;сэкономьте до&nbsp;50%</p>
             </div>
-            <form class="application-form" action="https://echo.htmlacademy.ru" method="post">
-              <fieldset class="application-form__fieldset reset-fieldset">
-                <div class="application-form__content-wrapper">
-                  <h3 class="application-form__legend reset-text">Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время</h3>
-                  <ul class="application-form__list reset-list">
-                    <li class="application-form__item">
-                      <label class="visually-hidden" for="name-field">Имя</label>
-                      <input class="application-form__input" type="text" placeholder="Имя" id="name-field">
-                    </li>
-                    <li class="application-form__item">
-                      <label class="visually-hidden" for="phone-field">Телефон</label>
-                      <input class="application-form__input" type="tel" placeholder="Телефон" id="phone-field">
-                    </li>
-                    <li class="application-form__item">
-                      <label class="visually-hidden" for="email-field">Email</label>
-                      <input class="application-form__input" type="email" placeholder="Email" id="email-field">
-                    </li>
-                  </ul>
-                  <p class="application-form__checkbox reset-text">
-                    <input class="application-form__input-checkbox visually-hidden" type="checkbox" id="checkbox-field" checked>
-                    <label class="application-form__label-checkbox" for="checkbox-field">Я согласен на обработку моих персональных данных</label>
-                  </p>
-                  <button class="btn application-form__button" type="submit">Оставить заявку</button>
-                </div>
-              </fieldset>
-            </form>
+            <div class="application-form">
+              <h3 class="application-form__title reset-text">Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время</h3>
+              <form action="https://echo.htmlacademy.ru" method="post" data-form="submit">
+                <ul class="application-form__list reset-list">
+                  <li class="application-form__item">
+                    <label class="visually-hidden" for="name-field">Имя</label>
+                    <input class="application-form__input" type="text" placeholder="Имя" id="name-field" data-input="name-field">
+                  </li>
+                  <li class="application-form__item">
+                    <label class="visually-hidden" for="phone-field">Телефон</label>
+                    <input class="application-form__input" type="tel" placeholder="Телефон" id="phone-field" data-input="phone-field">
+                  </li>
+                  <li class="application-form__item">
+                    <label class="visually-hidden" for="email-field">Email</label>
+                    <input class="application-form__input" type="email" placeholder="Email" id="email-field" data-input="email-field">
+                  </li>
+                </ul>
+                <p class="application-form__checkbox reset-text">
+                  <input class="application-form__input-checkbox visually-hidden" type="checkbox" id="checkbox-field" data-input="checkbox" checked>
+                  <label class="application-form__label-checkbox" for="checkbox-field">Я согласен на обработку моих персональных данных</label>
+                </p>
+                <button class="btn application-form__button" type="submit">Оставить заявку</button>
+              </form>
+            </div>
           </div>
         </section>
         <section class="contacts" id="contacts">
           <div class="container contacts__wrapper">
             <h2 class="visually-hidden">Контакты</h2>
-            <div class="contacts__map-wrapper">
+            <div class="contacts__map-wrapper" data-map="map">
               <picture>
                 <!-- 1х: 290px; 2x: 580px -->
                 <source media="(max-width: 319px)" type="image/webp" srcset="img/content/map/map-mobile.webp 1x, img/content/map/map-mobile@2x.webp 2x">
@@ -457,16 +455,16 @@
           <div class="footer-navigation">
             <ul class="footer-navigation__list reset-list">
               <li class="footer-navigation__item">
-                <a class="footer-navigation__link" href="#advantages">Преимущества</a>
+                <a class="footer-navigation__link" href="#advantages" data-link="anchor-link">Преимущества</a>
               </li>
               <li class="footer-navigation__item">
-                <a class="footer-navigation__link" href="#catalog">Направления</a>
+                <a class="footer-navigation__link" href="#catalog" data-link="anchor-link">Направления</a>
               </li>
               <li class="footer-navigation__item">
-                <a class="footer-navigation__link" href="#booking">Ближайшие круизы</a>
+                <a class="footer-navigation__link" href="#booking" data-link="anchor-link">Ближайшие круизы</a>
               </li>
               <li class="footer-navigation__item">
-                <a class="footer-navigation__link" href="#contacts">Контакты</a>
+                <a class="footer-navigation__link" href="#contacts" data-link="anchor-link">Контакты</a>
               </li>
             </ul>
           </div>
@@ -507,36 +505,34 @@
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">
-          <h2 class="visually-hidden">Модальное окно</h2>
-          <form class="application-form" action="https://echo.htmlacademy.ru" method="post">
-            <fieldset class="application-form__fieldset reset-fieldset">
-              <div class="application-form__content-wrapper">
-                <h3 class="application-form__legend reset-text">Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время</h3>
-                <ul class="application-form__list reset-list">
-                  <li class="application-form__item">
-                    <label class="visually-hidden" for="modal-name-field">Имя</label>
-                    <input class="application-form__input" type="text" placeholder="Имя" id="modal-name-field">
-                  </li>
-                  <li class="application-form__item">
-                    <label class="visually-hidden" for="modal-phone-field">Телефон</label>
-                    <input class="application-form__input" type="tel" placeholder="Телефон" id="modal-phone-field">
-                  </li>
-                  <li class="application-form__item">
-                    <label class="visually-hidden" for="modal-email-field">Email</label>
-                    <input class="application-form__input" type="email" placeholder="Email" id="modal-email-field">
-                  </li>
-                </ul>
-                <p class="application-form__checkbox reset-text">
-                  <input class="application-form__input-checkbox visually-hidden" type="checkbox" id="modal-checkbox-field" checked>
-                  <label class="application-form__label-checkbox" for="modal-checkbox-field">Я согласен на обработку моих персональных данных</label>
-                </p>
-                <button class="btn application-form__button" type="submit">Оставить заявку</button>
-              </div>
-            </fieldset>
-          </form>
+          <div class="application-form">
+            <h2 class="application-form__title reset-text">Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время</h2>
+            <form action="https://echo.htmlacademy.ru" method="post" data-form="submit">
+              <ul class="application-form__list reset-list">
+                <li class="application-form__item">
+                  <label class="visually-hidden" for="modal-name-field">Имя</label>
+                  <input class="application-form__input" type="text" placeholder="Имя" id="modal-name-field" data-input="name-field">
+                </li>
+                <li class="application-form__item">
+                  <label class="visually-hidden" for="modal-phone-field">Телефон</label>
+                  <input class="application-form__input" type="tel" placeholder="Телефон" id="modal-phone-field" data-input="phone-field">
+                </li>
+                <li class="application-form__item">
+                  <label class="visually-hidden" for="modal-email-field">Email</label>
+                  <input class="application-form__input" type="email" placeholder="Email" id="modal-email-field" data-input="email-field">
+                </li>
+              </ul>
+              <p class="application-form__checkbox reset-text">
+                <input class="application-form__input-checkbox visually-hidden" type="checkbox" id="modal-checkbox-field" data-input="checkbox" checked>
+                <label class="application-form__label-checkbox" for="modal-checkbox-field">Я согласен на обработку моих персональных данных</label>
+              </p>
+              <button class="btn application-form__button" type="submit">Оставить заявку</button>
+            </form>
+          </div>
         </div>
       </div>
     </section>
+
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNDrSx-tXwouhgMarRJCfmSlodzCAIrXs"></script>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>

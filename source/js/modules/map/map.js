@@ -1,7 +1,7 @@
 const initMap = () => {
   const uluru = {lat: 59.938823968762776, lng: 30.323025941216045};
 
-  const map = new google.maps.Map(document.querySelector('.contacts__map-wrapper'), {
+  const map = new google.maps.Map(document.querySelector('[data-map]'), {
     center: uluru,
     zoom: 16,
   });
@@ -18,6 +18,8 @@ const initMap = () => {
     },
     map: map,
   });
-}
+
+  marker.setMap(map);
+};
 
 export {initMap};

@@ -1,5 +1,13 @@
 .social {
+  margin-left: 40px;
 
+  @include vp-767 {
+    margin-left: 25px;
+  }
+
+  @include vp-319 {
+    margin-left: 0;
+  }
 }
 
 .social__list {
@@ -22,7 +30,6 @@
 
 .social__link {
   display: block;
-
 }
 
 .social__icon {

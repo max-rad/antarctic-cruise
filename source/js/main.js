@@ -3,6 +3,7 @@ import {initModals} from './modules/modals/init-modals';
 import {showMenu} from './modules/menu/menu';
 import {initMap} from './modules/map/map';
 import {smoothScroll} from './modules/scroll/scroll';
+import {validateForm} from "./modules/modals/validate-form";
 
 // ---------------------------------
 
@@ -18,12 +19,14 @@ window.addEventListener('DOMContentLoaded', () => {
 
   smoothScroll();
   showMenu();
-  initMap();
+  validateForm();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
+    initMap();
     initModals();
+
   });
 });
 
