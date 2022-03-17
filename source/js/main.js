@@ -3,7 +3,7 @@ import {initModals} from './modules/modals/init-modals';
 import {showMenu} from './modules/menu/menu';
 import {initMap} from './modules/map/map';
 import {smoothScroll} from './modules/scroll/scroll';
-import {validateForm} from "./modules/modals/validate-form";
+import {validateForm} from './modules/modals/validate-form';
 
 // ---------------------------------
 
