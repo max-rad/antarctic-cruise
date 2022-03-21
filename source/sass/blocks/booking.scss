@@ -9,7 +9,7 @@
     background-image: url("../img/content/booking/booking-background-desktop@2x.jpg");
   }
 
-  @include vp-767 {
+  @include vp-768 {
     background-image: url("../img/content/booking/booking-background-tablet.jpg");
 
     @media (min-resolution: $retina-dppx) {
@@ -17,7 +17,7 @@
     }
   }
 
-  @include vp-319 {
+  @include vp-320 {
     background-image: url("../img/content/booking/booking-background-mobile.jpg");
 
     @media (min-resolution: $retina-dppx) {
@@ -33,12 +33,12 @@
   column-gap: 144px;
   padding: 50px 163px;
 
-  @include vp-767 {
+  @include vp-768 {
     justify-content: center;
     padding: 88px 60px 100px;
   }
 
-  @include vp-319 {
+  @include vp-320 {
     padding: 59px 15px 65px;
   }
 }
@@ -48,7 +48,7 @@
   margin-top: 10px;
   margin-bottom: 20px;
 
-  @include vp-767 {
+  @include vp-768 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -58,7 +58,7 @@
     margin-bottom: 52px;
   }
 
-  @include vp-319 {
+  @include vp-320 {
     margin-bottom: 34px;
   }
 
@@ -69,14 +69,14 @@
     line-height: 60px;
     color: $color-tangaroa;
 
-    @include vp-767 {
+    @include vp-768 {
       margin-bottom: 5px;
       font-size: 34px;
       line-height: 51px;
       text-align: center;
     }
 
-    @include vp-319 {
+    @include vp-320 {
       margin-bottom: 14px;
       font-size: 24px;
       line-height: 31px;
@@ -93,13 +93,13 @@
       display: none;
     }
 
-    @include vp-767 {
+    @include vp-768 {
       padding-right: 20px;
       padding-left: 20px;
       text-align: center;
     }
 
-    @include vp-319 {
+    @include vp-320 {
       padding: 0;
       font-size: 16px;
       line-height: 22px;

@@ -1,8 +1,8 @@
 .footer-navigation {
   margin-right: auto;
 
-  @include vp-319 {
-    margin-bottom: 30px;
+  @include vp-320 {
+    margin-bottom: 26px;
   }
 }
 
@@ -10,7 +10,7 @@
   display: flex;
   flex-wrap: wrap;
 
-  @include vp-319 {
+  @include vp-320 {
     flex-direction: column;
   }
 }
@@ -18,13 +18,13 @@
 .footer-navigation__item {
   margin-right: 33px;
 
-  @include vp-767 {
+  @include vp-768 {
     margin-right: 23px;
   }
 
-  @include vp-319 {
+  @include vp-320 {
     margin-right: 0;
-    margin-bottom: 23px;
+    margin-bottom: 17px;
 
     &:last-child {
       margin-bottom: 0;
@@ -42,7 +42,7 @@
   line-height: 20px;
   color: $color-alice-blue;
 
-  @include vp-767 {
+  @include vp-768 {
     font-size: 12px;
     line-height: 15px;
   }

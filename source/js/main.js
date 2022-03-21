@@ -26,7 +26,6 @@ window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
     initMap();
     initModals();
-
   });
 });
 

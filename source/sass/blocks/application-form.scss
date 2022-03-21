@@ -4,7 +4,7 @@
   background-color: $color-tangaroa;
   box-shadow: 0 4px 45px $color-tangaroa-zero-point-fifteen;
 
-  @include vp-319 {
+  @include vp-320 {
     width: 290px;
     padding: 35px 30px 41px;
   }
@@ -16,7 +16,7 @@
     line-height: 27px;
     color: $color-alice-blue;
 
-    @include vp-319 {
+    @include vp-320 {
       line-height: 25px;
       text-align: center;
     }
@@ -54,7 +54,7 @@
 .application-form__checkbox {
   margin-bottom: 30px;
 
-  @include vp-319 {
+  @include vp-320 {
     margin-bottom: 24px;
   }
 
@@ -68,7 +68,7 @@
       height: 18px;
       background-color: $color-alice-blue;
 
-      @include vp-319 {
+      @include vp-320 {
         width: 20px;
         height: 20px;
         margin-right: 8px;
@@ -109,7 +109,7 @@
     color: $color-alice-blue;
     cursor: pointer;
 
-    @include vp-319 {
+    @include vp-320 {
       min-height: 20px;
       padding-top: 0;
       padding-right: 50px;
