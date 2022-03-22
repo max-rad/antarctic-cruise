@@ -430,7 +430,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_menu_menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/menu/menu */ "./js/modules/menu/menu.js");
 /* harmony import */ var _modules_map_map__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/map/map */ "./js/modules/map/map.js");
 /* harmony import */ var _modules_scroll_scroll__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/scroll/scroll */ "./js/modules/scroll/scroll.js");
-/* harmony import */ var _modules_modals_validate_form__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/modals/validate-form */ "./js/modules/modals/validate-form.js");
+/* harmony import */ var _modules_modals_init_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/modals/init-forms */ "./js/modules/modals/init-forms.js");
 
 
 
@@ -451,7 +451,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
   window.addEventListener('load', function () {
     Object(_modules_modals_init_modals__WEBPACK_IMPORTED_MODULE_1__["initModals"])();
-    Object(_modules_modals_validate_form__WEBPACK_IMPORTED_MODULE_5__["validateForm"])();
+    Object(_modules_modals_init_forms__WEBPACK_IMPORTED_MODULE_5__["initForms"])();
   });
 }); // ---------------------------------
 // ❗❗❗ обязательно установите плагины eslint, stylelint, editorconfig в редактор кода.
@@ -554,6 +554,184 @@ var showMenu = function showMenu() {
       navMain.classList.add('navigation--is-closed');
     }
   });
+};
+
+
+
+/***/ }),
+
+/***/ "./js/modules/modals/forms.js":
+/*!************************************!*\
+  !*** ./js/modules/modals/forms.js ***!
+  \************************************/
+/*! exports provided: Forms */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Forms", function() { return Forms; });
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+var Forms = /*#__PURE__*/function () {
+  function Forms() {
+    _classCallCheck(this, Forms);
+
+    this._modalForms = document.querySelectorAll('[data-form]');
+    this._formName = null;
+    this._documentClickHandler = this._documentClickHandler.bind(this);
+
+    this._initForms();
+  }
+
+  _createClass(Forms, [{
+    key: "_initForms",
+    value: function _initForms() {
+      if (this._modalForms.length) {
+        document.addEventListener('click', this._documentClickHandler);
+      }
+    }
+  }, {
+    key: "_documentClickHandler",
+    value: function _documentClickHandler(evt) {
+      var target = evt.target;
+
+      if (!target.closest('[data-form]')) {
+        return;
+      }
+
+      this._formName = target.closest('[data-form]').dataset.form;
+
+      if (!this._formName) {
+        return;
+      }
+
+      this.validateForm();
+    }
+  }, {
+    key: "validateForm",
+    value: function validateForm() {
+      var formName = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : this._formName;
+      var modalForm = document.querySelector("[data-form=\"".concat(formName, "\"]"));
+
+      if (!modalForm) {
+        return;
+      }
+
+      document.removeEventListener('click', this._documentClickHandler);
+      var nameField = modalForm.querySelector('[data-input="name-field"]');
+      var phoneField = modalForm.querySelector('[data-input="phone-field"]');
+      var emailField = modalForm.querySelector('[data-input="email-field"]');
+      var checkboxField = modalForm.querySelector('[data-input="checkbox"]');
+      nameField.addEventListener('input', function () {
+        var regName = /^[А-ЯЁа-яё]+$/;
+        var invalidMessage = '';
+        nameField.setCustomValidity('');
+        var name = nameField.value.trim();
+
+        if (name === '') {
+          invalidMessage = 'Name is required';
+        } else if (!regName.test(name)) {
+          invalidMessage = 'Invalid name';
+        }
+
+        if (invalidMessage.length > 0) {
+          nameField.setCustomValidity(invalidMessage);
+        }
+
+        nameField.reportValidity();
+      });
+      phoneField.addEventListener('input', function () {
+        var regPhone = /^\+?\d{11}$/;
+        var invalidMessage = '';
+        phoneField.setCustomValidity('');
+        var phone = phoneField.value.trim();
+
+        if (phone === '') {
+          invalidMessage = 'Phone is required';
+        } else if (!regPhone.test(phone)) {
+          invalidMessage = 'Invalid phone';
+        }
+
+        if (invalidMessage.length > 0) {
+          phoneField.setCustomValidity(invalidMessage);
+        }
+
+        phoneField.reportValidity();
+      });
+      emailField.addEventListener('input', function () {
+        var regEmail = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+        var invalidMessage = '';
+        emailField.setCustomValidity('');
+        var email = emailField.value.trim();
+
+        if (email === '') {
+          invalidMessage = 'Email is required';
+        } else if (!regEmail.test(email)) {
+          invalidMessage = 'Invalid email';
+        }
+
+        if (invalidMessage.length > 0) {
+          emailField.setCustomValidity(invalidMessage);
+        }
+
+        emailField.reportValidity();
+      });
+      checkboxField.addEventListener('change', function () {
+        var invalidMessage = '';
+        checkboxField.setCustomValidity('');
+
+        if (!checkboxField.checked) {
+          invalidMessage = 'Consent required';
+        }
+
+        if (invalidMessage.length > 0) {
+          checkboxField.setCustomValidity(invalidMessage);
+        }
+
+        checkboxField.reportValidity();
+      });
+      modalForm.addEventListener('submit', function (evt) {
+        if (nameField.value === '') {
+          evt.preventDefault();
+          nameField.setCustomValidity('Name is required');
+          nameField.reportValidity();
+          nameField.focus();
+        } else if (phoneField.value === '') {
+          evt.preventDefault();
+          phoneField.setCustomValidity('Phone is required');
+          phoneField.reportValidity();
+          phoneField.focus();
+        }
+      });
+    }
+  }]);
+
+  return Forms;
+}();
+
+/***/ }),
+
+/***/ "./js/modules/modals/init-forms.js":
+/*!*****************************************!*\
+  !*** ./js/modules/modals/init-forms.js ***!
+  \*****************************************/
+/*! exports provided: forms, initForms */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "forms", function() { return forms; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initForms", function() { return initForms; });
+/* harmony import */ var _forms__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./forms */ "./js/modules/modals/forms.js");
+
+var forms;
+
+var initForms = function initForms() {
+  forms = new _forms__WEBPACK_IMPORTED_MODULE_0__["Forms"]();
 };
 
 
@@ -849,109 +1027,6 @@ var Modals = /*#__PURE__*/function () {
 
   return Modals;
 }();
-
-/***/ }),
-
-/***/ "./js/modules/modals/validate-form.js":
-/*!********************************************!*\
-  !*** ./js/modules/modals/validate-form.js ***!
-  \********************************************/
-/*! exports provided: validateForm */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "validateForm", function() { return validateForm; });
-var validateForm = function validateForm() {
-  var nameField = document.querySelector('[data-input="name-field"]');
-  var phoneField = document.querySelector('[data-input="phone-field"]');
-  var emailField = document.querySelector('[data-input="email-field"]');
-  var checkboxField = document.querySelector('[data-input="checkbox"]');
-  var submitForm = document.querySelector('[data-form="submit"]');
-  nameField.addEventListener('input', function () {
-    var regName = /^[А-ЯЁа-яё]+$/;
-    var invalidMessage = '';
-    nameField.setCustomValidity('');
-    var name = nameField.value.trim();
-
-    if (name === '') {
-      invalidMessage = 'Name is required';
-    } else if (!regName.test(name)) {
-      invalidMessage = 'Invalid name';
-    }
-
-    if (invalidMessage.length > 0) {
-      nameField.setCustomValidity(invalidMessage);
-    }
-
-    nameField.reportValidity();
-  });
-  phoneField.addEventListener('input', function () {
-    var regPhone = /^\+?\d{11}$/;
-    var invalidMessage = '';
-    phoneField.setCustomValidity('');
-    var phone = phoneField.value.trim();
-
-    if (phone === '') {
-      invalidMessage = 'Phone is required';
-    } else if (!regPhone.test(phone)) {
-      invalidMessage = 'Invalid phone';
-    }
-
-    if (invalidMessage.length > 0) {
-      phoneField.setCustomValidity(invalidMessage);
-    }
-
-    phoneField.reportValidity();
-  });
-  emailField.addEventListener('input', function () {
-    var regEmail = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
-    var invalidMessage = '';
-    emailField.setCustomValidity('');
-    var email = emailField.value.trim();
-
-    if (email === '') {
-      invalidMessage = 'Email is required';
-    } else if (!regEmail.test(email)) {
-      invalidMessage = 'Invalid email';
-    }
-
-    if (invalidMessage.length > 0) {
-      emailField.setCustomValidity(invalidMessage);
-    }
-
-    emailField.reportValidity();
-  });
-  checkboxField.addEventListener('change', function () {
-    var invalidMessage = '';
-    checkboxField.setCustomValidity('');
-
-    if (!checkboxField.checked) {
-      invalidMessage = 'Consent required';
-    }
-
-    if (invalidMessage.length > 0) {
-      checkboxField.setCustomValidity(invalidMessage);
-    }
-
-    checkboxField.reportValidity();
-  });
-  submitForm.addEventListener('submit', function (evt) {
-    if (nameField.value === '') {
-      evt.preventDefault();
-      nameField.setCustomValidity('Name is required');
-      nameField.reportValidity();
-      nameField.focus();
-    } else if (phoneField.value === '') {
-      evt.preventDefault();
-      phoneField.setCustomValidity('Phone is required');
-      phoneField.reportValidity();
-      phoneField.focus();
-    }
-  });
-};
-
-
 
 /***/ }),
 

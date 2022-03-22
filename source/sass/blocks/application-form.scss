@@ -66,7 +66,7 @@
   }
 
   input {
-    + .application-form__label-checkbox::before {
+    + label::before {
       content: "";
       position: absolute;
       top: 0;
@@ -83,7 +83,7 @@
     }
 
     &:checked {
-      + .application-form__label-checkbox::before {
+      + label::before {
         background-image: url("../img/svg/icon-check.svg");
         background-repeat: no-repeat;
         background-position: 50% 50%;
@@ -92,13 +92,13 @@
 
     &:not(:disabled):hover,
     &:not(:disabled):focus {
-      + .application-form__label-checkbox::before {
+      + label::before {
         opacity: 0.8;
       }
     }
 
     &:disabled {
-      + .application-form__label-checkbox::before {
+      + label::before {
         opacity: 0.5;
         pointer-events: none;
       }

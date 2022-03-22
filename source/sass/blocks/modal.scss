@@ -71,6 +71,11 @@
     cursor: pointer;
   }
 
+  &__content {
+    position: relative;
+    
+  }
+
   &--responsive {
     .modal__content {
       width: 100%;
