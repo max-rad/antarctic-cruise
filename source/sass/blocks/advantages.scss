@@ -76,32 +76,19 @@
   position: relative;
   width: 360px;
   min-height: 242px;
-  padding: 82px 0 24px 30px;
+  padding: 82px 30px 24px;
   background-color: $color-alice-blue;
 
   @include vp-768 {
     width: 206px;
     min-height: 310px;
-    padding: 71px 0 19px 20px;
+    padding: 71px 16px 19px 20px;
   }
 
   @include vp-320 {
     width: 290px;
     min-height: 250px;
-  }
-
-  &--icon-cruise-liner {
-    p {
-      padding-right: 42px;
-
-      @include vp-768 {
-        padding-right: 32px;
-      }
-
-      @include vp-320 {
-        padding-right: 15px;
-      }
-    }
+    padding: 71px 20px 19px;
   }
 
   &--icon-cruise-liner::before {
@@ -124,14 +111,14 @@
 
   &--icon-all-inclusive {
     p {
-      padding-right: 45px;
+      padding-right: 15px;
 
       @include vp-768 {
-        padding-right: 24px;
+        padding-right: 0;
       }
 
       @include vp-320 {
-        padding-right: 47px;
+        padding-right: 20px;
       }
     }
   }
@@ -156,14 +143,22 @@
 
   &--icon-excursion-tours {
     p {
-      padding-right: 80px;
+      padding-right: 55px;
+
+      br {
+        display: none;
+      }
 
       @include vp-768 {
-        padding-right: 19px;
+        padding-right: 1px;
       }
 
       @include vp-320 {
-        padding-right: 37px;
+        padding-right: 15px;
+
+        br {
+          display: block;
+        }
       }
     }
   }

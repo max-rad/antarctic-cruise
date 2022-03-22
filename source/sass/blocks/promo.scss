@@ -27,14 +27,14 @@
 }
 
 .promo__wrapper {
-  padding: 270px 0 278px 198px;
+  padding: 270px 198px 278px;
 
   @include vp-768 {
-    padding: 268px 0 275px 45px;
+    padding: 268px 45px 275px;
   }
 
   @include vp-320 {
-    padding: 176px 0 179px 15px;
+    padding: 176px 15px 179px;
   }
 
   h1 {

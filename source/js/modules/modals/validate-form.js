@@ -78,13 +78,13 @@ const validateForm = () => {
   });
 
   submitForm.addEventListener('submit', function (evt) {
-    evt.preventDefault();
-
     if (nameField.value === '') {
+      evt.preventDefault();
       nameField.setCustomValidity('Name is required');
       nameField.reportValidity();
       nameField.focus();
     } else if (phoneField.value === '') {
+      evt.preventDefault();
       phoneField.setCustomValidity('Phone is required');
       phoneField.reportValidity();
       phoneField.focus();
