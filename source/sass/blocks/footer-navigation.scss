@@ -1,7 +1,7 @@
 .footer-navigation {
   margin-right: auto;
 
-  @include vp-320 {
+  @include mobile {
     margin-bottom: 26px;
   }
 }
@@ -10,7 +10,7 @@
   display: flex;
   flex-wrap: wrap;
 
-  @include vp-320 {
+  @include mobile {
     flex-direction: column;
   }
 }
@@ -18,11 +18,11 @@
 .footer-navigation__item {
   margin-right: 33px;
 
-  @include vp-768 {
+  @include tablet {
     margin-right: 23px;
   }
 
-  @include vp-320 {
+  @include mobile {
     margin-right: 0;
     margin-bottom: 17px;
 
@@ -42,7 +42,7 @@
   line-height: 20px;
   color: $color-alice-blue;
 
-  @include vp-768 {
+  @include tablet {
     font-size: 12px;
     line-height: 15px;
   }

@@ -9,7 +9,7 @@
     background-image: url("../img/content/advantages/advantages-background-desktop@2x.jpg");
   }
 
-  @include vp-768 {
+  @include tablet {
     background-image: url("../img/content/advantages/advantages-background-tablet.jpg");
 
     @media (min-resolution: $retina-dppx) {
@@ -17,7 +17,7 @@
     }
   }
 
-  @include vp-320 {
+  @include mobile {
     background-image: url("../img/content/advantages/advantages-background-mobile.jpg");
 
     @media (min-resolution: $retina-dppx) {
@@ -29,11 +29,11 @@
 .advantages__wrapper {
   padding: 110px 103px 120px;
 
-  @include vp-768 {
+  @include tablet {
     padding: 90px 44px 100px;
   }
 
-  @include vp-320 {
+  @include mobile {
     padding: 57px 15px 64px;
   }
 
@@ -45,13 +45,13 @@
     text-align: center;
     color: $color-tangaroa;
 
-    @include vp-768 {
+    @include tablet {
       margin-bottom: 49px;
       font-size: 26px;
       line-height: 39px;
     }
 
-    @include vp-320 {
+    @include mobile {
       margin-bottom: 30px;
       font-size: 24px;
       line-height: 36px;
@@ -66,7 +66,7 @@
   column-gap: 40px;
   row-gap: 40px;
 
-  @include vp-768 {
+  @include tablet {
     column-gap: 30px;
     row-gap: 30px;
   }
@@ -79,13 +79,13 @@
   padding: 82px 30px 24px;
   background-color: $color-alice-blue;
 
-  @include vp-768 {
+  @include tablet {
     width: 206px;
     min-height: 310px;
     padding: 71px 16px 19px 20px;
   }
 
-  @include vp-320 {
+  @include mobile {
     width: 290px;
     min-height: 250px;
     padding: 71px 20px 19px;
@@ -100,7 +100,7 @@
     height: 32px;
     background-image: url("../img/svg/icon-liner-desktop.svg");
 
-    @include vp-768 {
+    @include tablet {
       top: 25px;
       left: 20px;
       width: 21px;
@@ -113,11 +113,11 @@
     p {
       padding-right: 15px;
 
-      @include vp-768 {
+      @include tablet {
         padding-right: 0;
       }
 
-      @include vp-320 {
+      @include mobile {
         padding-right: 20px;
       }
     }
@@ -132,7 +132,7 @@
     height: 21px;
     background-image: url("../img/svg/icon-tick-desktop.svg");
 
-    @include vp-768 {
+    @include tablet {
       top: 29px;
       left: 20px;
       width: 33px;
@@ -149,11 +149,11 @@
         display: none;
       }
 
-      @include vp-768 {
+      @include tablet {
         padding-right: 1px;
       }
 
-      @include vp-320 {
+      @include mobile {
         padding-right: 15px;
 
         br {
@@ -172,7 +172,7 @@
     height: 15px;
     background-image: url("../img/svg/icon-ship-desktop.svg");
 
-    @include vp-768 {
+    @include tablet {
       top: 32px;
       left: 20px;
       width: 38px;
@@ -188,12 +188,12 @@
     line-height: 27px;
     color: $color-tangaroa;
 
-    @include vp-768 {
+    @include tablet {
       margin-bottom: 9px;
       line-height: 25px;
     }
 
-    @include vp-320 {
+    @include mobile {
       padding-right: 80px;
     }
   }

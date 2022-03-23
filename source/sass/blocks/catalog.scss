@@ -5,11 +5,11 @@
 .catalog__wrapper {
   padding: 110px 118px 120px;
 
-  @include vp-768 {
+  @include tablet {
     padding: 90px 59px 100px;
   }
 
-  @include vp-320 {
+  @include mobile {
     padding: 55px 25px 65px;
   }
 
@@ -21,12 +21,12 @@
     text-align: center;
     color: $color-tangaroa;
 
-    @include vp-768 {
+    @include tablet {
       font-size: 26px;
       line-height: 39px;
     }
 
-    @include vp-320 {
+    @include mobile {
       margin-bottom: 32px;
       font-size: 24px;
       line-height: 36px;

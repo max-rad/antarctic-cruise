@@ -5,17 +5,19 @@
 .contacts__wrapper {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
   column-gap: 100px;
   row-gap: 40px;
   padding: 144px 103px 96px;
 
-  @include vp-768 {
+  @include tablet {
+    justify-content: space-around;
     column-gap: 29px;
     padding: 100px 45px;
   }
 
-  @include vp-320 {
+  @include mobile {
     row-gap: 0;
     padding: 58px 15px 65px;
   }
@@ -26,12 +28,12 @@
   width: 560px;
   height: 306px;
 
-  @include vp-768 {
+  @include tablet {
     width: 324px;
     height: 335px;
   }
 
-  @include vp-320 {
+  @include mobile {
     order: 1;
     width: 290px;
     height: 316px;
@@ -48,12 +50,12 @@
     background-repeat: no-repeat;
     background-position: 0 0;
 
-    @include vp-768 {
+    @include tablet {
       top: 218px;
       left: 109px;
     }
 
-    @include vp-320 {
+    @include mobile {
       top: 224px;
       left: 112px;
     }
@@ -63,11 +65,11 @@
 .contacts__info {
   width: 500px;
 
-  @include vp-768 {
+  @include tablet {
     width: 324px;
   }
 
-  @include vp-320 {
+  @include mobile {
     order: 0;
   }
 
@@ -77,18 +79,18 @@
     font-size: 18px;
     line-height: 27px;
 
-    @include vp-768 {
+    @include tablet {
       margin-bottom: 26px;
     }
 
-    @include vp-320 {
+    @include mobile {
       margin-bottom: 27px;
     }
   }
 }
 
 .contacts__list {
-  @include vp-320 {
+  @include mobile {
     margin-bottom: 36px;
   }
 }
@@ -98,7 +100,7 @@
   margin-bottom: 20px;
   padding-left: 28px;
 
-  @include vp-320 {
+  @include mobile {
     margin-bottom: 21px;
   }
 
@@ -111,7 +113,7 @@
       display: none;
     }
 
-    @include vp-768 {
+    @include tablet {
       br {
         display: block;
       }
@@ -129,7 +131,7 @@
     background-repeat: no-repeat;
     background-position: 0 0;
 
-    @include vp-768 {
+    @include tablet {
       top: 5px;
     }
   }
@@ -145,7 +147,7 @@
     background-repeat: no-repeat;
     background-position: 0 0;
 
-    @include vp-768 {
+    @include tablet {
       top: 2px;
     }
   }

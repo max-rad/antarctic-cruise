@@ -4,11 +4,11 @@
   margin: 0 auto;
   padding: 0 103px;
 
-  @include vp-768 {
+  @include tablet {
     padding: 0 45px;
   }
 
-  @include vp-320 {
+  @include mobile {
     padding: 0 15px;
   }
 }
