@@ -10,6 +10,7 @@
   </head>
   <body>
     <div class="wrapper">
+      <div class="wrapper__overlay" data-overlay="overlay"></div>
       <header class="page-header">
         <div class="container page-header__wrapper">
           <nav class="navigation navigation--no-js navigation--is-closed" data-menu="menu">
@@ -81,7 +82,7 @@
             <h2 class="reset-text">Ближайшие круизы</h2>
             <ul class="catalog__list reset-list">
               <li class="catalog__item">
-                <article class="cruise">
+                <article class="cruise" tabindex="0">
                   <div class="cruise__title-wrapper">
                     <h3 class="reset-text">Круиз “Астория”</h3>
                     <div class="cruise__description">
@@ -118,7 +119,7 @@
                 </article>
               </li>
               <li class="catalog__item">
-                <article class="cruise">
+                <article class="cruise" tabindex="0">
                   <div class="cruise__title-wrapper">
                     <h3 class="reset-text">Круиз “Элайн”</h3>
                     <div class="cruise__description">
@@ -155,7 +156,7 @@
                 </article>
               </li>
               <li class="catalog__item">
-                <article class="cruise">
+                <article class="cruise" tabindex="0">
                   <div class="cruise__title-wrapper">
                     <h3 class="reset-text">Круиз “Атлантис”</h3>
                     <div class="cruise__description">
@@ -192,7 +193,7 @@
                 </article>
               </li>
               <li class="catalog__item">
-                <article class="cruise">
+                <article class="cruise" tabindex="0">
                   <div class="cruise__title-wrapper">
                     <h3 class="reset-text">Круиз “Одиссей”</h3>
                     <div class="cruise__description">
@@ -229,7 +230,7 @@
                 </article>
               </li>
               <li class="catalog__item">
-                <article class="cruise">
+                <article class="cruise" tabindex="0">
                   <div class="cruise__title-wrapper">
                     <h3 class="reset-text">Круиз “Олимпия”</h3>
                     <div class="cruise__description">
@@ -266,7 +267,7 @@
                 </article>
               </li>
               <li class="catalog__item">
-                <article class="cruise">
+                <article class="cruise" tabindex="0">
                   <div class="cruise__title-wrapper">
                     <h3 class="reset-text">Круиз “Аврора”</h3>
                     <div class="cruise__description">
@@ -303,7 +304,7 @@
                 </article>
               </li>
               <li class="catalog__item">
-                <article class="cruise">
+                <article class="cruise" tabindex="0">
                   <div class="cruise__title-wrapper">
                     <h3 class="reset-text">Круиз “Леонор”</h3>
                     <div class="cruise__description">
@@ -340,7 +341,7 @@
                 </article>
               </li>
               <li class="catalog__item">
-                <article class="cruise">
+                <article class="cruise" tabindex="0">
                   <div class="cruise__title-wrapper">
                     <h3 class="reset-text">Круиз “Минион - 1”</h3>
                     <div class="cruise__description">
@@ -391,19 +392,19 @@
                 <ul class="application-form__list reset-list">
                   <li class="application-form__item">
                     <label class="visually-hidden" for="name-field">Имя</label>
-                    <input type="text" placeholder="Имя" id="name-field" data-input="name-field">
+                    <input type="text" placeholder="Имя" id="name-field" data-input="name-field" required>
                   </li>
                   <li class="application-form__item">
                     <label class="visually-hidden" for="phone-field">Телефон</label>
-                    <input type="tel" placeholder="Телефон" id="phone-field" data-input="phone-field">
+                    <input type="tel" placeholder="Телефон" id="phone-field" data-input="phone-field" required>
                   </li>
                   <li class="application-form__item">
                     <label class="visually-hidden" for="email-field">Email</label>
-                    <input type="email" placeholder="Email" id="email-field" data-input="email-field">
+                    <input type="email" placeholder="Email" id="email-field" data-input="email-field" required>
                   </li>
                 </ul>
                 <div class="application-form__checkbox reset-text">
-                  <input class="visually-hidden" type="checkbox" id="checkbox-field" data-input="checkbox" checked>
+                  <input class="visually-hidden" type="checkbox" id="checkbox-field" data-input="checkbox" required checked>
                   <label for="checkbox-field">Я согласен на обработку моих персональных данных</label>
                 </div>
                 <button class="btn application-form__button" type="submit">Оставить заявку</button>
@@ -513,19 +514,19 @@
               <ul class="application-form__list reset-list">
                 <li class="application-form__item">
                   <label class="visually-hidden" for="modal-name-field">Имя</label>
-                  <input type="text" placeholder="Имя" id="modal-name-field" data-input="name-field">
+                  <input type="text" placeholder="Имя" id="modal-name-field" data-input="name-field" required>
                 </li>
                 <li class="application-form__item">
                   <label class="visually-hidden" for="modal-phone-field">Телефон</label>
-                  <input type="tel" placeholder="Телефон" id="modal-phone-field" data-input="phone-field">
+                  <input type="tel" placeholder="Телефон" id="modal-phone-field" data-input="phone-field" required>
                 </li>
                 <li class="application-form__item">
                   <label class="visually-hidden" for="modal-email-field">Email</label>
-                  <input type="email" placeholder="Email" id="modal-email-field" data-input="email-field">
+                  <input type="email" placeholder="Email" id="modal-email-field" data-input="email-field" required>
                 </li>
               </ul>
               <div class="application-form__checkbox reset-text">
-                <input class="visually-hidden" type="checkbox" id="modal-checkbox-field" data-input="checkbox" checked>
+                <input class="visually-hidden" type="checkbox" id="modal-checkbox-field" data-input="checkbox" required checked>
                 <label for="modal-checkbox-field">Я согласен на обработку моих персональных данных</label>
               </div>
               <button class="btn application-form__button" type="submit">Оставить заявку</button>

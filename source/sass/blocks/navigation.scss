@@ -14,7 +14,7 @@
 
   @include mobile {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr min-content;
     padding: 20px 15px;
   }
 
@@ -43,6 +43,7 @@
     }
 
     &--is-opened {
+      z-index: 2;
       flex-wrap: wrap;
       row-gap: 33px;
       margin-left: 35px;

@@ -9,9 +9,8 @@ const smoothScroll = () => {
 
       document.getElementById(anchorHref).scrollIntoView({
         behavior: 'smooth',
-        block: 'start',
+        block: 'nearest',
       });
-
     });
   }
 };

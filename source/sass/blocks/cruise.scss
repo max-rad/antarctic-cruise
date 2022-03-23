@@ -1,77 +1,95 @@
 .cruise {
   position: relative;
 
-  &:hover {
-    h3 {
-      z-index: 3;
-      top: 29px;
-      left: 25px;
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      .cruise__title-wrapper {
+        justify-content: space-between;
+        padding: 29px 25px 35px;
+        background-color: $color-tangaroa;
+        box-shadow: 0 4px 35px $color-tangaroa-zero-point-fifteen;
 
-      @include tablet {
-        left: 35px;
+        @include tablet {
+          padding: 29px 35px 35px;
+        }
+
+        @include mobile {
+          padding: 29px 25px 35px;
+        }
       }
 
-      @include mobile {
-        left: 25px;
+      h3 {
+        margin-bottom: 13px;
+      }
+
+      .cruise__description {
+        display: flex;
       }
     }
+  }
 
-    /*.cruise__description {
-      display: flex;
-    }*/
+  @include tablet {
+    &:focus {
+      .cruise__title-wrapper {
+        justify-content: space-between;
+        padding: 29px 25px 35px;
+        background-color: $color-tangaroa;
+        box-shadow: 0 4px 35px $color-tangaroa-zero-point-fifteen;
+
+        @include tablet {
+          padding: 29px 35px 35px;
+        }
+
+        @include mobile {
+          padding: 29px 25px 35px;
+        }
+      }
+
+      h3 {
+        margin-bottom: 13px;
+      }
+
+      .cruise__description {
+        display: flex;
+      }
+    }
   }
 }
 
 .cruise__title-wrapper {
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 22px 30px;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 
+  @include tablet {
+    padding: 27px 35px;
+  }
+
+  @include mobile {
+    padding: 17px 25px;
+  }
+
   h3 {
-    z-index: 1;
-    position: absolute;
-    bottom: 21px;
-    left: 30px;
     font-weight: 500;
     font-size: 18px;
     line-height: 27px;
     color: $color-alice-blue;
-
-    @include tablet {
-      bottom: 27px;
-      left: 35px;
-    }
-
-    @include mobile {
-      bottom: 17px;
-      left: 25px;
-    }
   }
 }
 
 .cruise__description {
-  z-index: 2;
-  position: absolute;
   display: none;
   flex-direction: column;
   justify-content: space-between;
-  bottom: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  padding: 69px 25px 35px;
-  background-color: $color-tangaroa;
-  box-shadow: 0 4px 35px $color-tangaroa-zero-point-fifteen;
-
-  @include tablet {
-    padding: 69px 35px 35px;
-  }
-
-  @include mobile {
-    padding: 69px 25px 35px;
-  }
 }
 
 .cruise__name {
@@ -82,7 +100,7 @@
 }
 
 .cruise__info {
-  margin-bottom: 11px;
+  margin-bottom: 24px;
   font-size: 14px;
   line-height: 20px;
   color: $color-quartz;
@@ -108,6 +126,7 @@
 .cruise__button {
   align-self: flex-end;
   width: 100%;
+  padding: 10px 20px;
 }
 
 .cruise__image-wrapper {

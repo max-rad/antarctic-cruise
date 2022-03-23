@@ -39,13 +39,38 @@ export class Forms {
 
     document.removeEventListener('click', this._documentClickHandler);
 
+    let isStorageSupport = true;
+    let storageName = '';
+    let storagePhone = '';
+    let storageEmail = '';
+
+    try {
+      storageName = localStorage.getItem('name');
+      storagePhone = localStorage.getItem('phone');
+      storageEmail = localStorage.getItem('email');
+    } catch (err) {
+      isStorageSupport = false;
+    }
+
     const nameField = modalForm.querySelector('[data-input="name-field"]');
     const phoneField = modalForm.querySelector('[data-input="phone-field"]');
     const emailField = modalForm.querySelector('[data-input="email-field"]');
     const checkboxField = modalForm.querySelector('[data-input="checkbox"]');
 
+    if (storageName) {
+      nameField.value = storageName;
+    }
+
+    if (storagePhone) {
+      phoneField.value = storagePhone;
+    }
+
+    if (storageEmail) {
+      emailField.value = storageEmail;
+    }
+
     nameField.addEventListener('input', function () {
-      const regName = /^[А-ЯЁа-яё]+$/;
+      const regName = /^[A-Za-zА-яа-я -']+$/;
       let invalidMessage = '';
       nameField.setCustomValidity('');
       const name = nameField.value.trim();
@@ -127,6 +152,17 @@ export class Forms {
         phoneField.setCustomValidity('Phone is required');
         phoneField.reportValidity();
         phoneField.focus();
+      } else if (emailField.value === '') {
+        evt.preventDefault();
+        emailField.setCustomValidity('Email is required');
+        emailField.reportValidity();
+        emailField.focus();
+      } else {
+        if (isStorageSupport) {
+          localStorage.setItem('name', nameField.value);
+          localStorage.setItem('phone', phoneField.value);
+          localStorage.setItem('email', emailField.value);
+        }
       }
     });
   }

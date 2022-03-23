@@ -5,7 +5,7 @@
   box-shadow: 0 4px 45px $color-tangaroa-zero-point-fifteen;
 
   @include mobile {
-    width: 290px;
+    width: unset;
     padding: 35px 30px 41px;
   }
 

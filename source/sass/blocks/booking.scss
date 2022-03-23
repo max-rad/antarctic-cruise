@@ -59,6 +59,7 @@
   }
 
   @include mobile {
+    width: unset;
     margin-bottom: 34px;
   }
 
