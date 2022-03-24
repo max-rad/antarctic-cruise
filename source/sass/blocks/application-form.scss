@@ -49,16 +49,15 @@
       color: $color-tangaroa-zero-point-seven;
     }
 
-    @media (hover: hover), screen and (min-width: 0\0) {
-      &:hover,
-      &:focus {
-        opacity: 0.8;
-      }
+    &:hover,
+    &:focus {
+      opacity: 0.8;
     }
   }
 }
 
 .application-form__checkbox {
+  display: flex;
   margin-bottom: 30px;
 
   @include mobile {
@@ -118,8 +117,8 @@
 
     @include mobile {
       min-height: 20px;
+      margin-right: 50px;
       padding-top: 0;
-      padding-right: 50px;
       padding-left: 28px;
     }
   }
