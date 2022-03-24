@@ -29,6 +29,7 @@ const showMenu = () => {
       navMain.classList.remove('navigation--is-opened');
       navMain.classList.add('navigation--is-closed');
       menuOverlay.style.display = 'none';
+      scrollLock.enableScrolling();
     }
   });
 
