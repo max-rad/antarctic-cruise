@@ -2,6 +2,7 @@
   margin-right: auto;
 
   @include mobile {
+    margin-right: 100px;
     margin-bottom: 26px;
   }
 }
@@ -9,10 +10,6 @@
 .footer-navigation__list {
   display: flex;
   flex-wrap: wrap;
-
-  @include mobile {
-    flex-direction: column;
-  }
 }
 
 .footer-navigation__item {
@@ -23,7 +20,6 @@
   }
 
   @include mobile {
-    margin-right: 0;
     margin-bottom: 17px;
 
     &:last-child {

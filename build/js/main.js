@@ -540,7 +540,6 @@ var initMap = function initMap() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "showMenu", function() { return showMenu; });
 /* harmony import */ var _utils_scroll_lock__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../utils/scroll-lock */ "./js/utils/scroll-lock.js");
-/* harmony import */ var _scroll_scroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../scroll/scroll */ "./js/modules/scroll/scroll.js");
 function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
 
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
@@ -549,68 +548,63 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
 
 
-
 var showMenu = function showMenu() {
-  if (window.screen.width < 768) {
-    (function () {
-      var scrollLock = new _utils_scroll_lock__WEBPACK_IMPORTED_MODULE_0__["ScrollLock"]();
-      var menuOverlay = document.querySelector('[data-overlay]');
-      var navMain = document.querySelector('[data-menu="menu"]');
-      var navToggle = navMain.querySelector('[data-menu="toggle"]');
-      var anchorLinks = navMain.querySelectorAll('[data-link]');
-      navMain.classList.remove('navigation--no-js');
-      navToggle.addEventListener('click', function (evt) {
+  var scrollLock = new _utils_scroll_lock__WEBPACK_IMPORTED_MODULE_0__["ScrollLock"]();
+  var menuOverlay = document.querySelector('[data-overlay]');
+  var navMain = document.querySelector('[data-menu="menu"]');
+  var navToggle = navMain.querySelector('[data-menu="toggle"]');
+  var anchorLinks = navMain.querySelectorAll('[data-link]');
+  navMain.classList.remove('navigation--no-js');
+  navToggle.addEventListener('click', function (evt) {
+    evt.preventDefault();
+
+    if (navMain.classList.contains('navigation--is-closed')) {
+      navMain.classList.remove('navigation--is-closed');
+      navMain.classList.add('navigation--is-opened');
+      menuOverlay.style.display = 'block';
+      scrollLock.disableScrolling();
+    } else {
+      navMain.classList.remove('navigation--is-opened');
+      navMain.classList.add('navigation--is-closed');
+      menuOverlay.style.display = 'none';
+      scrollLock.enableScrolling();
+    }
+  });
+  window.addEventListener('mouseup', function (evt) {
+    if (!navMain.contains(evt.target)) {
+      navMain.classList.remove('navigation--is-opened');
+      navMain.classList.add('navigation--is-closed');
+      menuOverlay.style.display = 'none';
+    }
+  });
+
+  var _iterator = _createForOfIteratorHelper(anchorLinks),
+      _step;
+
+  try {
+    var _loop = function _loop() {
+      var anchor = _step.value;
+      anchor.addEventListener('click', function (evt) {
         evt.preventDefault();
-
-        if (navMain.classList.contains('navigation--is-closed')) {
-          navMain.classList.remove('navigation--is-closed');
-          navMain.classList.add('navigation--is-opened');
-          menuOverlay.style.display = 'block';
-          scrollLock.disableScrolling();
-        } else {
-          navMain.classList.remove('navigation--is-opened');
-          navMain.classList.add('navigation--is-closed');
-          menuOverlay.style.display = 'none';
-          scrollLock.enableScrolling();
-        }
+        navMain.classList.remove('navigation--is-opened');
+        navMain.classList.add('navigation--is-closed');
+        menuOverlay.style.display = 'none';
+        scrollLock.enableScrolling();
+        var anchorHref = anchor.getAttribute('href').substring(1);
+        document.getElementById(anchorHref).scrollIntoView({
+          behavior: 'smooth',
+          block: 'nearest'
+        });
       });
-      window.addEventListener('mouseup', function (evt) {
-        if (!navMain.contains(evt.target)) {
-          navMain.classList.remove('navigation--is-opened');
-          navMain.classList.add('navigation--is-closed');
-          menuOverlay.style.display = 'none';
-        }
-      });
+    };
 
-      var _iterator = _createForOfIteratorHelper(anchorLinks),
-          _step;
-
-      try {
-        var _loop = function _loop() {
-          var anchor = _step.value;
-          anchor.addEventListener('click', function (evt) {
-            evt.preventDefault();
-            navMain.classList.remove('navigation--is-opened');
-            navMain.classList.add('navigation--is-closed');
-            menuOverlay.style.display = 'none';
-            scrollLock.enableScrolling();
-            var anchorHref = anchor.getAttribute('href').substring(1);
-            document.getElementById(anchorHref).scrollIntoView({
-              behavior: 'smooth',
-              block: 'nearest'
-            });
-          });
-        };
-
-        for (_iterator.s(); !(_step = _iterator.n()).done;) {
-          _loop();
-        }
-      } catch (err) {
-        _iterator.e(err);
-      } finally {
-        _iterator.f();
-      }
-    })();
+    for (_iterator.s(); !(_step = _iterator.n()).done;) {
+      _loop();
+    }
+  } catch (err) {
+    _iterator.e(err);
+  } finally {
+    _iterator.f();
   }
 };
 
