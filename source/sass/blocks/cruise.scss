@@ -9,14 +9,6 @@
         padding: 29px 25px 35px;
         background-color: $color-tangaroa;
         box-shadow: 0 4px 35px $color-tangaroa-zero-point-fifteen;
-
-        @include tablet {
-          padding: 29px 35px 35px;
-        }
-
-        @include mobile {
-          padding: 29px 25px 35px;
-        }
       }
 
       h3 {
@@ -30,15 +22,14 @@
   }
 
   @include tablet {
-    &:focus {
+    &:focus,
+    &:active {
       .cruise__title-wrapper {
-        justify-content: space-between;
-        padding: 29px 25px 35px;
-        background-color: $color-tangaroa;
-        box-shadow: 0 4px 35px $color-tangaroa-zero-point-fifteen;
-
         @include tablet {
+          justify-content: space-between;
           padding: 29px 35px 35px;
+          background-color: $color-tangaroa;
+          box-shadow: 0 4px 35px $color-tangaroa-zero-point-fifteen;
         }
 
         @include mobile {
