@@ -8,28 +8,31 @@ const showMenu = () => {
   const anchorLinks = navMain.querySelectorAll('[data-link]');
 
   navMain.classList.remove('navigation--no-js');
+
   navToggle.addEventListener('click', function (evt) {
     evt.preventDefault();
 
     if (navMain.classList.contains('navigation--is-closed')) {
       navMain.classList.remove('navigation--is-closed');
       navMain.classList.add('navigation--is-opened');
-      menuOverlay.style.display = 'block';
+      menuOverlay.classList.add('wrapper--overlay');
       scrollLock.disableScrolling();
     } else {
       navMain.classList.remove('navigation--is-opened');
       navMain.classList.add('navigation--is-closed');
-      menuOverlay.style.display = 'none';
+      menuOverlay.classList.remove('wrapper--overlay');
       scrollLock.enableScrolling();
     }
   });
 
-  window.addEventListener('mouseup', (evt) => {
-    if (!navMain.contains(evt.target)) {
-      navMain.classList.remove('navigation--is-opened');
-      navMain.classList.add('navigation--is-closed');
-      menuOverlay.style.display = 'none';
-      scrollLock.enableScrolling();
+  menuOverlay.addEventListener('click', (evt) => {
+    if (menuOverlay.classList.contains('wrapper--overlay')) {
+      if (!navMain.contains(evt.target)) {
+        navMain.classList.remove('navigation--is-opened');
+        navMain.classList.add('navigation--is-closed');
+        menuOverlay.classList.remove('wrapper--overlay');
+        scrollLock.enableScrolling();
+      }
     }
   });
 
@@ -38,7 +41,7 @@ const showMenu = () => {
       evt.preventDefault();
       navMain.classList.remove('navigation--is-opened');
       navMain.classList.add('navigation--is-closed');
-      menuOverlay.style.display = 'none';
+      menuOverlay.classList.remove('wrapper--overlay');
       scrollLock.enableScrolling();
 
       const anchorHref = anchor.getAttribute('href').substring(1);
