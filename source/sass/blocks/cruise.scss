@@ -5,9 +5,10 @@
     &:hover {
       .cruise__title-wrapper {
         justify-content: space-between;
-        padding: 29px 25px 35px;
+        padding: 29px 25px 33px;
         background-color: $color-tangaroa;
         box-shadow: 0 4px 35px $color-tangaroa-zero-point-fifteen;
+        overflow-y: auto;
       }
 
       h3 {
@@ -78,8 +79,6 @@
   display: none;
   flex-direction: column;
   justify-content: space-between;
-  width: 100%;
-  height: 100%;
 }
 
 .cruise__name {

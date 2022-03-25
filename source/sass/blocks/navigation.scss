@@ -15,7 +15,9 @@
   @include mobile {
     display: grid;
     grid-template-columns: auto min-content;
+    max-height: 568px;
     padding: 20px 15px;
+    overflow-y: auto;
   }
 
   @include mobile {
@@ -150,6 +152,11 @@
 .navigation__list {
   display: flex;
   flex-wrap: wrap;
+  row-gap: 8px;
+
+  @include mobile {
+    row-gap: unset;
+  }
 }
 
 .navigation__item {

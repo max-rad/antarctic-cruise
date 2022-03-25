@@ -3,21 +3,21 @@
 }
 
 .contacts__wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: minmax(350px, 560px) minmax(350px, 500px);
   column-gap: 100px;
   row-gap: 40px;
   padding: 144px 103px 96px;
 
   @include tablet {
-    justify-content: space-around;
+    grid-template-columns: 1fr 1fr;
     column-gap: 29px;
     padding: 100px 45px;
   }
 
   @include mobile {
+    display: flex;
+    flex-direction: column;
     row-gap: 0;
     padding: 58px 15px 65px;
   }
@@ -25,17 +25,16 @@
 
 .contacts__map-wrapper {
   position: relative;
-  width: 560px;
+  width: 100%;
   height: 306px;
 
   @include tablet {
-    width: 324px;
+    align-self: center;
     height: 335px;
   }
 
   @include mobile {
     order: 1;
-    width: 290px;
     height: 316px;
   }
 
@@ -63,11 +62,7 @@
 }
 
 .contacts__info {
-  width: 500px;
-
-  @include tablet {
-    width: 324px;
-  }
+  align-self: center;
 
   @include mobile {
     order: 0;
